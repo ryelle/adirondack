@@ -1,0 +1,46 @@
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font__headers;
+	font-weight: 900;
+}
+
+h1 {
+	@include font-size( 2.8 );
+}
+
+h2 {
+	@include font-size( 2.1 );
+}
+
+h3 {
+	@include font-size( 1.8 );
+}
+
+.site-title {
+	@include font-size( 3.6 );
+	line-height: 100px;
+	padding-left: 60px;
+
+	a {
+		color: $color__text-header-site;
+		text-decoration: none;
+	}
+}
+
+.entry-title {
+	color: $color__link;
+	@include font-size( 1.8 );
+	text-transform: uppercase;
+
+	.single & {
+		@include font-size( 2.8 );
+		margin-bottom: 60px;
+	}
+}
+
+.widget-title {
+	margin-bottom: 20px;
+	@include font-size( 1.8 );
+	font-style: normal;
+	text-transform: uppercase;
+	color: $color__text-widget-title;
+}

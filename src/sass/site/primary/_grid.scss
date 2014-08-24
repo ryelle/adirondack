@@ -1,0 +1,94 @@
+.grid {
+	overflow: hidden;
+}
+
+.post-grid {
+	position: relative;
+	z-index: 1;
+	float: left;
+	display: block;
+	overflow: hidden;
+	margin: 0;
+	width: 25%;
+	vertical-align: middle;
+	background: white;
+	text-align: center;
+
+	&:nth-of-type(4n+1) {
+		clear: left;
+	}
+
+	&:before {
+		content: "";
+		display: block;
+		padding-top: 74.626866%;
+	}
+
+	.entry-link {
+		span {
+			display: inline-block;
+			padding: 5px 2em;
+			border: 3px solid $color__border-link;
+			border-radius: 20px;
+		}
+
+		&:hover, &:active, &:focus {
+			color: $color__link;
+		}
+	}
+
+	&.no-image .entry-link {
+		@include fill-container;
+		display: block;
+		padding: 2em;
+	}
+}
+
+.animation-container {
+	@include fill-container;
+	padding: 2em;
+	backface-visibility: hidden;
+
+	&:before {
+		@include fill-container;
+		background: fade-out( $color__overlay-post, 0.1 );
+		content: '';
+		opacity: 0;
+		transition: opacity 0.35s;
+
+		.hentry:hover & {
+			opacity: 1;
+		}
+	}
+
+	.entry-title {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		padding: 0 2em;
+		opacity: 0;
+		transition: transform 0.35s, opacity 0.35s;
+		transform: translate3d(0,-50%,0);
+
+		.hentry:hover & {
+			opacity: 1;
+			transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+		}
+	}
+
+	.entry-link {
+		position: absolute;
+		bottom: 3em;
+		left: 0;
+		width: 100%;
+		opacity: 0;
+		transition: transform 0.35s, opacity 0.35s;
+		transform: translate3d(0,50%,0);
+
+		.hentry:hover & {
+			opacity: 1;
+			transform: translate3d(0,0,0);
+		}
+	}
+}

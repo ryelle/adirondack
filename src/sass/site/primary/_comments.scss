@@ -1,0 +1,71 @@
+.comment-content a {
+	word-wrap: break-word;
+}
+.bypostauthor {
+	display: block;
+}
+
+$sidebar-width: 275px;
+
+#content {
+	position: relative;
+}
+
+#comments-bg {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: fade-out( $color__overlay-post, 0.1 );
+}
+
+#comments {
+	display: none;
+
+	.animating &,
+	.comments-visible & {
+		display: block;
+	}
+}
+
+#comments-container,
+#comments-bg {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 15px 30px;
+
+	width: 60px;
+	transform: translate3d( 0, 0, 0 );
+
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
+
+	color: white;
+	z-index: 10;
+
+	.animating &,
+	.comments-visible & {
+		width: $sidebar-width + 60px;
+		transform: translate3d( 0, 0, 0 );
+	}
+
+	.animating & {
+		transition: transform .25s ease-in-out;
+	}
+
+	/***
+	 * Slide the comments in
+	 */
+	.animating.left & { // animating left
+		transform: translate3d( 0, 0, 0 );
+	}
+
+	/***
+	 * Slide the comments out
+	 */
+	.animating.right & {
+		transform: translate3d( #{$sidebar-width}, 0, 0 );
+	}
+
+}

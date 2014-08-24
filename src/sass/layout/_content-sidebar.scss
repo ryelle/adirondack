@@ -1,0 +1,31 @@
+.hentry {
+	margin: 0 0 0 120px;
+	max-width: $size__site-main;
+	overflow: hidden;
+}
+
+.entry-content {
+	float: left;
+	margin: 0 #{-$size__site-sidebar} 0 0;
+	width: 100%;
+}
+
+.entry-content .wrapper {
+	margin: 0 #{$size__site-sidebar} 0 0;
+}
+
+.entry-footer {
+	clear: none;
+	float: right;
+	overflow: hidden;
+	padding-left: 75px;
+	width: $size__site-sidebar;
+}
+
+.entry-content,
+.entry-footer {
+	&:before,
+	&:after {
+		content: none;
+	}
+}

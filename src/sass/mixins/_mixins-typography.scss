@@ -1,0 +1,9 @@
+
+@mixin link {
+	color: $color__link;
+	font-family: $font__headers;
+	@include font-size(1.2);
+	font-weight: 900;
+	text-decoration: none;
+	text-transform: uppercase;
+}

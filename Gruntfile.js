@@ -117,9 +117,13 @@ module.exports = function(grunt) {
 		},
 
 		watch: {
-			dev: {
+			css: {
 				files: [SOURCE_DIR + 'sass/**'],
 				tasks: ['sass:dev']
+			},
+			js: {
+				files: [SOURCE_DIR + 'js/src/**'],
+				tasks: ['concat:dev']
 			}
 		}
 	});

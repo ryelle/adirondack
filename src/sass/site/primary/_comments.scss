@@ -5,6 +5,14 @@
 	display: block;
 }
 
+/**
+ * Slide-out comment sidebar.
+ *
+ * Animates the width of the comments container, from a blue
+ * stripe 60px wide, to the full sidebar width of 335px.
+ * Animation is controlled by toggeled body classes.
+ */
+
 $sidebar-width: 275px;
 
 #content {
@@ -52,7 +60,7 @@ $sidebar-width: 275px;
 	/***
 	 * Slide the comments in
 	 */
-	.animating.left & { // animating left
+	.animating.left & {
 		width: $sidebar-width + 60px;
 	}
 

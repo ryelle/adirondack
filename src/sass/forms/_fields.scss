@@ -27,7 +27,7 @@ input[type="password"],
 input[type="search"],
 textarea {
 	color: $color__text-input;
-	border: 1px solid $color__border-input;
+	border: none;
 	@include border-radius(3px);
 }
 
@@ -45,12 +45,15 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"] {
-	padding: 3px;
+	padding: 0 15px;
+	width: 100%;
+	line-height: 40px;
 }
 
 textarea {
 	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
-	padding-left: 3px;
+	padding: 15px;
 	vertical-align: top; /* Improves readability and alignment in all browsers */
 	width: 100%;
+	resize: vertical;
 }

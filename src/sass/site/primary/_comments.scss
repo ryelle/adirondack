@@ -5,6 +5,27 @@
 	display: block;
 }
 
+.comment-form {
+	label {
+		display: block;
+		margin-bottom: 15px;
+		font-family: $font__headers;
+		font-weight: 900;
+		@include font-size( 1.2 );
+		text-transform: uppercase;
+		color: $color__text-comment-title;
+	}
+
+	.comment-wrap {
+		position: relative;
+		@include divet( left-bottom, white );
+	}
+
+	.form-submit {
+		text-align: right;
+	}
+}
+
 /**
  * Slide-out comment sidebar.
  *

@@ -18,3 +18,48 @@
 	clip: auto;
 	width: auto;
 }
+
+
+@mixin divet( $direction, $color, $size: 30px, $pos: 20px ) {
+	background-color: $color;
+	&:after {
+		content:"";
+		display: block; /* reduce the damage in FF3.0 */
+		position: absolute;
+		width: 0;
+		border-style: solid;
+		border-color: transparent $color;
+	}
+
+	@if $direction == left {
+		&:after {
+			top: $pos;
+			left: -$size;
+			right: auto;
+			border-width: $size $size $size 0;
+		}
+	} @else if $direction == right {
+		&:after {
+			top: $pos;
+			left: auto;
+			right: -$size;
+			border-width: $size 0px $size $size;
+		}
+	} @else if $direction == top {
+		&:after {
+			top: -$size;
+			right: auto;
+			left: $pos;
+			border-color: $color transparent;
+			border-width: 0px $size $size $size;
+		}
+	} @else if $direction == left-bottom {
+		&:after {
+			bottom: -$size;
+			right: auto;
+			left: $pos;
+			border-color: $color transparent;
+			border-width: $size $size 0 0;
+		}
+	}
+}

@@ -31,4 +31,10 @@
 		else
 			container.className += ' toggled';
 	};
+
+	// make dropdowns functional on focus
+	$( '.main-navigation' ).find( 'a' ).on( 'focus blur', function() {
+		$( this ).parents('li').toggleClass( 'focus' );
+	} );
+
 } )( jQuery );

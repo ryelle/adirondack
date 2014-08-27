@@ -14,20 +14,20 @@
 		margin: 0;
 		padding-left: 0;
 
+		// Second level
 		ul {
-			float: left;
 			position: absolute;
+			z-index: 25;
 			top: 15px;
-			left: -999em;
-			z-index: 99999;
 			padding: 43px 0 0;
+			@include hide-dropdown;
 
+			// Third level
 			ul {
 				position: relative;
-				left: auto;
-				top: auto;
+				top: 0;
 				padding-top: 0;
-				margin-left: 0 !important;
+				@include show-dropdown;
 
 				li a {
 					padding-left: 20px;
@@ -44,17 +44,6 @@
 				width: 200px;
 				padding: 5px 10px;
 			}
-
-			:hover > a {
-			}
-
-			a:hover {
-			}
-		}
-
-		li:hover > ul {
-			left: auto;
-			margin-left: -10px;
 		}
 	}
 
@@ -63,13 +52,21 @@
 		position: relative;
 		padding: 0 15px;
 
-		&:hover > a {
+		&:hover > ul,
+		&.focus > ul,
+		a:focus + ul {
+			@include show-dropdown;
 		}
 	}
 
 	a {
 		display: block;
 		text-decoration: none;
+		outline: none;
+
+		&:focus {
+			text-decoration: underline;
+		}
 	}
 
 	.current_page_item > a,

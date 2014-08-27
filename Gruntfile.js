@@ -25,6 +25,7 @@ module.exports = function(grunt) {
 				]
 			}
 		},
+
 		copy: {
 			all: {
 				files: [{
@@ -39,12 +40,14 @@ module.exports = function(grunt) {
 						'!Gruntfile.js',
 						'!node_modules',
 						'!.sass-cache',
-						'!.gitignore'
+						'!.gitignore',
+						'!js/src'
 					],
 					dest: BUILD_DIR
 				}]
 			}
 		},
+
 		sass: {
 			dev: {
 				options: {
@@ -77,6 +80,17 @@ module.exports = function(grunt) {
 			},
 			dist: {
 				src: BUILD_DIR + 'style.css'
+			}
+		},
+
+		concat: {
+			dev: {
+				src: [ SOURCE_DIR + 'js/src/*.js' ],
+				dest: SOURCE_DIR + 'js/' + THEME_NAME + '.js',
+			},
+			dist: {
+				src: [ SOURCE_DIR + 'js/src/*.js' ],
+				dest: BUILD_DIR + 'js/' + THEME_NAME + '.js',
 			}
 		},
 
@@ -113,8 +127,8 @@ module.exports = function(grunt) {
 	// Register tasks.
 
 	// Build task.
-	grunt.registerTask('dev',     ['sass:dev', 'autoprefixer:dev']);
-	grunt.registerTask('build',   ['clean:all', 'copy:all', 'sass:dist', 'autoprefixer:dist', 'clean:dist']);
+	grunt.registerTask('dev',     ['sass:dev', 'autoprefixer:dev', 'concat:dev']);
+	grunt.registerTask('build',   ['clean:all', 'copy:all', 'sass:dist', 'autoprefixer:dist', 'concat:dist', 'clean:dist']);
 	grunt.registerTask('publish', ['build', 'compress:main']);
 
 	grunt.registerTask('screenshot', ['pageres']);

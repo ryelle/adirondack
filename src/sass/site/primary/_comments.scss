@@ -20,6 +20,7 @@ $sidebar-width: 275px;
 }
 
 #comments {
+	width: $sidebar-width;
 	display: none;
 
 	.animating &,
@@ -34,9 +35,9 @@ $sidebar-width: 275px;
 	top: 0;
 	right: 0;
 	padding: 15px 30px;
+	overflow: hidden;
 
 	width: 60px;
-	transform: translate3d( 0, 0, 0 );
 
 	-webkit-backface-visibility: hidden;
 	-webkit-perspective: 1000;
@@ -44,28 +45,29 @@ $sidebar-width: 275px;
 	color: white;
 	z-index: 10;
 
-	.animating &,
-	.comments-visible & {
-		width: $sidebar-width + 60px;
-		transform: translate3d( 0, 0, 0 );
-	}
-
 	.animating & {
-		transition: transform .25s ease-in-out;
+		transition: width .25s ease-in-out;
 	}
 
 	/***
 	 * Slide the comments in
 	 */
 	.animating.left & { // animating left
-		transform: translate3d( 0, 0, 0 );
+		width: $sidebar-width + 60px;
 	}
 
 	/***
 	 * Slide the comments out
 	 */
 	.animating.right & {
-		transform: translate3d( #{$sidebar-width}, 0, 0 );
+		width: 60px;
+	}
+
+	/**
+	 * Comments are visible
+	 */
+	.comments-visible & {
+		width: $sidebar-width + 60px;
 	}
 
 }

@@ -1,11 +1,27 @@
 #secondary {
-	position: relative;
+	display: none;
+	position: absolute;
+	z-index: 25;
+	top: 0;
+	left: 0;
+	right: 0;
 	padding: 0 30px;
 	background: $color__overlay-post;
 
 	.wrapper {
 		@include clearfix;
 	}
+
+	.widgets-animating &,
+	.widgets-visible & {
+		display: block;
+	}
+}
+
+#page,
+#secondary {
+	transform: translate3d( 0, 0, 0 );
+	transition: transform .2s cubic-bezier( .25,.1,.25,1 );
 }
 
 .widget {

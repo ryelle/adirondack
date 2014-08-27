@@ -11,8 +11,6 @@
 	$( '.widgets-toggle' ).on( 'touchstart click', function(e) {
 		e.preventDefault();
 
-		console.log( "click" );
-
 		var $body    = $( 'body' ),
 			$page    = $( '#page' ),
 

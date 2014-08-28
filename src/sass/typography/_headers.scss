@@ -37,7 +37,7 @@ h4 {
 	@include font-size( 1.8 );
 	text-transform: uppercase;
 
-	.single & {
+	.singular & {
 		@include font-size( 2.8 );
 		margin-bottom: 60px;
 	}

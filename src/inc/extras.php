@@ -99,3 +99,53 @@ function adirondack_excerpt_length( $len ) {
 	return 12;
 }
 add_filter( 'excerpt_length', 'adirondack_excerpt_length', 999 );
+
+/**
+ * Custom display for comments
+ */
+function adirondack_comment( $comment, $args, $depth ){ ?>
+
+<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
+
+<article id="div-comment-<?php comment_ID(); ?>" class="comment-body">
+	<?php if ( 0 != $args['avatar_size'] ) echo get_avatar( $comment, $args['avatar_size'] ); ?>
+
+	<div class="comment-content">
+	<?php
+		if ( $comment->comment_parent != '0' ) {
+			$comment_author = sprintf( __( 'In reply to %2$s, %1$s <span class="says">said,</span>', 'adirondack' ), get_comment_author_link(), get_comment_author( $comment->comment_parent ) );
+		} else {
+			$comment_author = sprintf( __( '%1$s <span class="says">said,</span>', 'adirondack' ), get_comment_author_link() );
+		}
+		echo apply_filters( 'comment_text', '<span class="comment-author vcard">' . $comment_author . '</span> ' . get_comment_text(), $comment, $args );
+	?>
+
+		<footer class="comment-meta">
+			<?php if ( '0' == $comment->comment_approved ) : ?>
+			<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'adirondack' ); ?></p>
+			<?php endif; ?>
+
+			<div class="comment-metadata">
+				<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID, $args ) ); ?>">
+				<?php if ( strtotime( 'last week' ) < get_comment_time( 'U' ) ): // more recent than 1 week ago ?>
+					<time datetime="<?php comment_time( 'c' ); ?>">
+						<?php printf( __( '%1$s ago', 'adirondack' ), human_time_diff( get_comment_time( 'U' ) ) ); ?>
+					</time>
+				<?php else: ?>
+					<time datetime="<?php comment_time( 'c' ); ?>">
+						<?php printf( _x( '%1$s at %2$s', '1: date, 2: time', 'adirondack' ), get_comment_date(), get_comment_time() ); ?>
+					</time>
+				<?php endif; ?>
+				</a>
+				<?php edit_comment_link( __( 'Edit', 'adirondack' ), '<span class="edit-link">', '</span>' ); ?>
+			</div><!-- .comment-metadata -->
+		</footer><!-- .comment-meta -->
+
+	</div><!-- .comment-content -->
+
+	<!-- @todo Reply link -->
+
+</article><!-- .comment-body -->
+<?php
+}
+

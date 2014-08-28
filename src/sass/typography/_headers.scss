@@ -51,7 +51,8 @@ h4 {
 	color: $color__text-widget-title;
 }
 
+.comments-title,
 .comment-reply-title {
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 	@include font-size( 2.1 );
 }

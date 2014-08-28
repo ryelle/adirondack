@@ -1,4 +1,13 @@
 ( function( $ ) {
+	if ( location.hash.length && ( location.hash.indexOf('comment') != -1 ) ) {
+		$( document.body ).addClass('comments-visible');
+
+		if ( $( '#content' ).height() < $( '#comments-container' ).height() ) {
+			$( '#comments-bg' ).css({ backgroundColor: 'transparent' });
+			$( '#comments-container' ).css({ backgroundColor: 'rgba(44, 54, 66, 0.9)' });
+		}
+	}
+
 	/***
 	 * Run this code when the #toggle-menu link has been tapped
 	 * or clicked
@@ -14,6 +23,12 @@
 
 		/* When the toggle menu link is clicked, animation starts */
 		$body.addClass( 'animating' );
+
+		// console.log( $( '#content' ).height(), $comments.height() );
+		if ( $( '#content' ).height() < $comments.height() ) {
+			$( '#comments-bg' ).css({ backgroundColor: 'transparent' });
+			$comments.css({ backgroundColor: 'rgba(44, 54, 66, 0.9)' });
+		}
 
 		/***
 		 * Determine the direction of the animation and
@@ -36,6 +51,11 @@
 			$body
 				.removeClass( 'animating left right' )
 				.toggleClass( 'comments-visible' );
+
+			if ( ! $body.hasClass('comments-visible' ) ) {
+				$comments.css({ backgroundColor: 'transparent' });
+				$( '#comments-bg' ).css({ backgroundColor: 'rgba(44, 54, 66, 0.9)' });
+			}
 
 			$comments.off( transitionEnd );
 		} );

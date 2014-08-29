@@ -1,5 +1,5 @@
 ( function( $ ) {
-	if ( location.hash.length && ( location.hash.indexOf('comment') != -1 ) ) {
+	if ( location.hash.length && ( ( location.hash.indexOf('comment') != -1 ) || ( location.hash.indexOf('respond') != -1 ) ) ) {
 		$( document.body ).addClass('comments-visible');
 
 		if ( $( '#content' ).height() < $( '#comments-container' ).height() ) {
@@ -12,7 +12,7 @@
 	 * Run this code when the #toggle-menu link has been tapped
 	 * or clicked
 	 */
-	$( '#toggle-comments' ).on( 'touchstart click', function(e) {
+	$( '.toggle-comments' ).on( 'touchstart click', function(e) {
 		e.preventDefault();
 
 		var $body     = $( 'body' ),
@@ -59,5 +59,14 @@
 
 			$comments.off( transitionEnd );
 		} );
+
+		// If we've clicked the text link, we should change the URL and jump to the top of the comments
+		if ( e.target.className.indexOf('text') !== -1 ) {
+			if ( ! $body.hasClass( 'comments-visible' ) ){
+				location.hash = '#comments';
+				$( window ).scrollTop( $comments.offset().top );
+			}
+		}
+
 	} );
 } )( jQuery );

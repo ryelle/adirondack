@@ -30,6 +30,13 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
+		<?php if ( comments_open() || '0' != get_comments_number() ) : ?>
+			<div class="meta-item comments">
+				<h4 class="meta-title"><?php _e( 'Comments', 'adirondack' ); ?></h4>
+				<a href="#comments" class="toggle-comments text" data-show="<?php esc_attr_e( 'View comments', 'adirondack' ); ?>" data-hide="<?php esc_attr_e( 'Hide comments', 'adirondack' ); ?>"></a>
+			</div>
+		<?php endif; ?>
+
 		<div class="meta-item bookmark">
 			<h4 class="meta-title"><?php _e( 'Bookmark', 'adirondack' ); ?></h4>
 			<?php printf( '<a href="%s" rel="bookmark">%s</a>', esc_url( get_permalink() ), __( 'Permalink', 'adirondack' ) ); ?>

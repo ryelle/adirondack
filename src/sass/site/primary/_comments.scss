@@ -80,6 +80,10 @@
 		color: $color__text-comment-title;
 	}
 
+	.comment-form-comment {
+		margin-bottom: 0;
+	}
+
 	.comment-wrap {
 		position: relative;
 		border-radius: 3px;
@@ -110,7 +114,7 @@
 	background-size: contain;
 }
 
-#toggle-comments {
+.toggle-comments.icon {
 	display: block;
 	position: absolute;
 	top: 65px;
@@ -129,6 +133,14 @@
 
 	.animating.right & {
 		background-image: url('images/arrows-open.png');
+	}
+}
+
+.toggle-comments.text:before {
+	content: attr(data-show);
+
+	.comments-visible & {
+		content: attr(data-hide);
 	}
 }
 

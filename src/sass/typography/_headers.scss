@@ -1,6 +1,10 @@
 h1, h2, h3, h4, h5, h6 {
 	font-family: $font__headers;
 	font-weight: 900;
+
+	.entry-content & {
+		color: $color__text-headers;
+	}
 }
 
 h1 {
@@ -55,4 +59,14 @@ h4 {
 .comment-reply-title {
 	margin-bottom: 20px;
 	@include font-size( 2.1 );
+}
+
+.meta-title {
+	margin-bottom: 2px;
+	@include font-size( 1.2 );
+	color: $color__text-headers;
+
+	&:first-of-type {
+		margin-top: 0;
+	}
 }

@@ -73,6 +73,10 @@ big {
 	@include link;
 }
 
+.entry-content {
+	@include font-size(1.7);
+}
+
 .entry-summary {
 	font-family: $font__main;
 	@include font-size(1.4);
@@ -80,4 +84,8 @@ big {
 	text-transform: none;
 	font-style: italic;
 	color: $color__text-excerpt;
+}
+
+.entry-footer {
+	@include font-size(1.4);
 }

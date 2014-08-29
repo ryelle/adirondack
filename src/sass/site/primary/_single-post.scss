@@ -5,3 +5,12 @@
 	background: no-repeat center;
 	background-size: cover;
 }
+
+.meta-item {
+	margin-bottom: 30px;
+	color: $color__link;
+
+	a {
+		text-decoration: none;
+	}
+}

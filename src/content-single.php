@@ -35,30 +35,29 @@
 			/* translators: used between list items, there is a space after the comma */
 			$tag_list = get_the_tag_list( '', __( ', ', 'adirondack' ) );
 
-			if ( ! adirondack_categorized_blog() ) {
-				// This blog only has 1 category so we just need to worry about tags in the meta text
-				if ( '' != $tag_list ) {
-					$meta_text = __( 'This entry was tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'adirondack' );
-				} else {
-					$meta_text = __( 'Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'adirondack' );
-				}
-			} else {
-				// But this blog has loads of categories so we should probably display them here
-				if ( '' != $tag_list ) {
-					$meta_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'adirondack' );
-				} else {
-					$meta_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'adirondack' );
-				}
-			} // end check for categories on this blog
-
-			printf(
-				$meta_text,
-				$category_list,
-				$tag_list,
-				get_permalink()
-			);
+			adirondack_posted_on();
 		?>
 
-		<?php edit_post_link( __( 'Edit', 'adirondack' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php if ( '' != $tag_list ) : ?>
+			<div class="meta-item tags">
+				<h4 class="meta-title"><?php _e( 'Tags', 'adirondack' ); ?></h4>
+				<?php echo $tag_list; ?>
+			</div>
+		<?php endif; ?>
+
+		<?php if ( adirondack_categorized_blog() && ( '' != $category_list ) ) : ?>
+			<div class="meta-item categories">
+				<h4 class="meta-title"><?php _e( 'Categories', 'adirondack' ); ?></h4>
+				<?php echo $category_list; ?>
+			</div>
+		<?php endif; ?>
+
+		<div class="meta-item bookmark">
+			<h4 class="meta-title"><?php _e( 'Bookmark', 'adirondack' ); ?></h4>
+			<?php printf( '<a href="%s" rel="bookmark">%s</a>', esc_url( get_permalink() ), __( 'Permalink', 'adirondack' ) ); ?>
+		</div>
+
+		<?php edit_post_link( __( 'Edit this page', 'adirondack' ), '<div class="meta-item edit"><h4 class="meta-title">' . __( 'For the author', 'adirondack' ) . '</h4><span class="edit-link">', '</span></div>' ); ?>
+
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

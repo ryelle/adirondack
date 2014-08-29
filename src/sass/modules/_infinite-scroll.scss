@@ -8,3 +8,21 @@
 .infinity-end.neverending .site-footer {
 	display: block;
 }
+
+#infinite-handle {
+	clear: both;
+	padding: 30px;
+	background: $color__overlay-post;
+	text-align: center;
+	cursor: pointer;
+
+	span {
+		padding: 0;
+		background: transparent;
+		color: $color__link;
+		font-family: $font__headers;
+		font-weight: 900;
+		@include font-size( 2.1 );
+		text-transform: uppercase;
+	}
+}

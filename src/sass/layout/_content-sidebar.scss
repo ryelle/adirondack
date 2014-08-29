@@ -33,3 +33,13 @@
 		content: none;
 	}
 }
+
+.post-navigation {
+	margin: 0 #{$size__site-sidebar} 0 0;
+
+	.nav-links {
+		margin: 0 0 100px 120px;
+		max-width: $size__site-main;
+		overflow: hidden;
+	}
+}

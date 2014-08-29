@@ -36,6 +36,5 @@
 		</div>
 
 		<?php edit_post_link( __( 'Edit this page', 'adirondack' ), '<div class="meta-item edit"><h4 class="meta-title">' . __( 'For the author', 'adirondack' ) . '</h4><span class="edit-link">', '</span></div>' ); ?>
-		?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

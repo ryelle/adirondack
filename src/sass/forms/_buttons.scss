@@ -37,3 +37,7 @@ input[type="submit"]:active {
 	background-color: $color__button-hover;
 	box-shadow: 0 2px 0 darken( $color__button-shadow, 10% );
 }
+
+.mejs-container button {
+	box-shadow: none;
+}

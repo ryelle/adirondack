@@ -1,9 +1,18 @@
+img[class*="wp-image-"] {
+	margin-bottom: 1em;
+}
+
 .wp-caption {
 	margin-bottom: 1.5em;
 	max-width: 100%;
+	overflow: hidden;
+	@include font-size( 1.4 );
+	font-style: italic;
+	background: fade-out( $color__overlay-post, 0.9 );
 
 	img[class*="wp-image-"] {
 		@include center-block;
+		margin-bottom: 0;
 	}
 
 	.wp-caption-text {

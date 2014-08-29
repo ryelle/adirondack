@@ -10,12 +10,18 @@
 	$image_id = get_post_thumbnail_id();
 	$url = wp_get_attachment_image_src( $image_id, 'full' ); ?>
 	<div class="entry-image" style="background-image:url('<?php echo esc_attr($url[0]); ?>');"></div>
-<?php endif; ?>
-
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<?php else: ?>
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
+<?php endif; ?>
+
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php if ( has_post_thumbnail() ) : ?>
+		<header class="entry-header">
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		</header><!-- .entry-header -->
+	<?php endif; ?>
 
 	<div class="entry-content">
 		<div class="wrapper">

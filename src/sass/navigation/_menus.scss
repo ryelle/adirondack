@@ -82,6 +82,21 @@
 		padding: 6px;
 		box-shadow: none;
 		line-height: 1;
+
+		&:focus {
+			outline: none;
+		}
+	}
+}
+
+.widgets-animating,
+.widgets-visible {
+	.widgets-toggle button {
+		background-color: $color__button-focus;
+
+		&:before {
+			content: "\f335";
+		}
 	}
 }
 

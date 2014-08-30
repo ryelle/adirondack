@@ -21,6 +21,7 @@
 	width: 50%;
 }
 
+.comment-navigation,
 .post-navigation {
 	a {
 		display: inline-block;
@@ -32,3 +33,15 @@
 	}
 }
 
+.comment-navigation {
+	width: 100%;
+
+	.nav-next,
+	.nav-previous {
+		width: 100%;
+	}
+
+	.nav-previous + .nav-next {
+		margin-top: 10px;
+	}
+}

@@ -1,0 +1,11 @@
+// Archive pages, like categories, tags, date, etc
+.page-header {
+	padding: 30px 0;
+	text-align: center;
+	background-color: $color__overlay-post;
+	color: white;
+
+	p:last-of-type {
+		margin-bottom: 0;
+	}
+}

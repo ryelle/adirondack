@@ -10,13 +10,13 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'has-image post-grid' ); ?> style="background: url(<?php echo esc_attr( $url[0] ); ?>) no-repeat center; background-size: cover;">
-	<div class="animation-container">
+	<a href="<?php the_permalink(); ?>" rel="bookmark" class="entry-link">
 		<header class="entry-header">
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		</header><!-- .entry-header -->
 
-		<a href="<?php the_permalink(); ?>" rel="bookmark" class="entry-link"><span>View more</span></a>
-	</div>
+		<div class="link-button"><span>View more</span></div>
+	</a>
 </article><!-- #post-<?php the_ID(); ?> -->
 
 <?php else: ?>

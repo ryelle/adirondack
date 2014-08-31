@@ -25,6 +25,10 @@
 	}
 
 	.entry-link {
+		@include fill-container;
+		display: block;
+		padding: 2em;
+
 		span {
 			display: inline-block;
 			padding: 5px 2em;
@@ -37,28 +41,25 @@
 		}
 	}
 
-	&.no-image .entry-link {
-		@include fill-container;
-		display: block;
-		padding: 2em;
-	}
 }
 
-.animation-container {
-	@include fill-container;
-	padding: 2em;
-	backface-visibility: hidden;
+.has-image {
+	.entry-link {
+		@include fill-container;
+		padding: 2em;
+		backface-visibility: hidden;
+	}
 
-	&:before {
+	.entry-link:before {
 		@include fill-container;
 		background: fade-out( $color__overlay-post, 0.1 );
 		content: '';
 		opacity: 0;
 		transition: opacity 0.35s;
+	}
 
-		.hentry:hover & {
-			opacity: 1;
-		}
+	&.hentry:hover .entry-link:before {
+		opacity: 1;
 	}
 
 	.entry-title {
@@ -70,14 +71,14 @@
 		opacity: 0;
 		transition: transform 0.35s, opacity 0.35s;
 		transform: translate3d(0,-50%,0);
-
-		.hentry:hover & {
-			opacity: 1;
-			transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
-		}
 	}
 
-	.entry-link {
+	&.hentry:hover .entry-title {
+		opacity: 1;
+		transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+	}
+
+	.link-button {
 		position: absolute;
 		bottom: 3em;
 		left: 0;
@@ -85,10 +86,10 @@
 		opacity: 0;
 		transition: transform 0.35s, opacity 0.35s;
 		transform: translate3d(0,50%,0);
+	}
 
-		.hentry:hover & {
-			opacity: 1;
-			transform: translate3d(0,0,0);
-		}
+	&.hentry:hover .link-button {
+		opacity: 1;
+		transform: translate3d(0,0,0);
 	}
 }

@@ -3,6 +3,25 @@ table {
 	width: 100%;
 }
 
+th, td {
+	padding: 5px 10px;
+	border-right: 1px solid $color__border-table;
+	border-bottom: 1px solid $color__border-table;
+
+	&:first-of-type {
+		padding-left: 0;
+	}
+
+	&:last-of-type {
+		padding-right: 0;
+		border-right: none;
+	}
+
+	tr:last-of-type & {
+		border-bottom: none;
+	}
+}
+
 th {
 	font-weight: bold;
 }

@@ -20,7 +20,7 @@ if ( post_password_required() ) {
 
 <div id="comments-bg"></div>
 <div id="comments-container">
-	<div class="comments-icon"></div>
+	<div class="toggle-comments comments-icon"></div>
 	<a href="#" class="toggle-comments icon"></a>
 
 	<div id="comments" class="comments-area">

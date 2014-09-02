@@ -113,9 +113,13 @@
 	top: 30px;
 	right: 15px;
 	width: 30px;
-	height: 23px;
+	height: 35px;
 	background: url('images/comment.png') no-repeat center;
 	background-size: contain;
+}
+
+.toggle-comments {
+	cursor: pointer;
 }
 
 .toggle-comments.icon {

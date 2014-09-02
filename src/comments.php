@@ -41,7 +41,7 @@ if ( post_password_required() ) {
 						'style'      => 'ol',
 						'short_ping' => true,
 						'avatar_size' => 50,
-						'callback'   => 'adirondack_comment',
+						'callback'   => 'adirondack_handle_comment',
 						'max_depth' => 1,
 					) );
 				?>

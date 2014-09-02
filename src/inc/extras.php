@@ -107,6 +107,45 @@ add_filter( 'excerpt_length', 'adirondack_excerpt_length', 999 );
 /**
  * Custom display for comments
  */
+
+/**
+ * Comment display callback, determine which display function should be used based on comment type.
+ * Pingbacks/trackbacks have a short display, while comments get full meta and author gravatar.
+ *
+ * @param object $comment The comment object.
+ * @param array  $args    An array of arguments.
+ * @param int    $depth   Depth of comment.
+ */
+function adirondack_handle_comment( $comment, $args, $depth ){
+	if ( 'pingback' == $comment->comment_type || 'trackback' == $comment->comment_type ) {
+		adirondack_ping( $comment, $args, $depth );
+	} else {
+		adirondack_comment( $comment, $args, $depth );
+	}
+}
+
+/**
+ * Display a pingback/trackback. Only display the pinging post.
+ *
+ * @param object $comment The comment object.
+ * @param array  $args    An array of arguments.
+ * @param int    $depth   Depth of comment.
+ */
+function adirondack_ping( $comment, $args, $depth ){ ?>
+	<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
+	<div class="comment-body">
+		<?php _e( 'Pingback:' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit' ), '<span class="edit-link">', '</span>' ); ?>
+	</div>
+<?php
+}
+
+/**
+ * Display a comment.
+ *
+ * @param object $comment The comment object.
+ * @param array  $args    An array of arguments.
+ * @param int    $depth   Depth of comment.
+ */
 function adirondack_comment( $comment, $args, $depth ){ ?>
 
 <li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">

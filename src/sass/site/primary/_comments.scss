@@ -64,6 +64,10 @@
 	margin-bottom: 30px;
 }
 
+.pingback .comment-body {
+	margin-bottom: 30px;
+}
+
 .comment-list + .comment-navigation {
 	@include clearfix;
 	margin: -70px 0 100px;

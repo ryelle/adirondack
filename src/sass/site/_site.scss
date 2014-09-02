@@ -7,6 +7,12 @@
 	@import "layout/content-sidebar";
 }
 
+.page-full-width {
+	article {
+		@import "layout/full-width";
+	}
+}
+
 /*--------------------------------------------------------------
 10.2 Post Formats
 --------------------------------------------------------------*/

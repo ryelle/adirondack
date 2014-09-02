@@ -1,16 +1,21 @@
 /*--------------------------------------------------------------
 10.1 Posts and pages
 --------------------------------------------------------------*/
+@import "primary/posts-and-pages";
+
 .singular {
 	@import "layout/content-sidebar";
 }
 
-@import "primary/posts-and-pages";
-
 /*--------------------------------------------------------------
-10.2 Asides
+10.2 Post Formats
 --------------------------------------------------------------*/
-@import "primary/asides";
+.singular {
+	.format-image,
+	.format-video {
+		@import "layout/full-width";
+	}
+}
 
 /*--------------------------------------------------------------
 10.3 Comments

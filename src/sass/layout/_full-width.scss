@@ -1,0 +1,32 @@
+/**
+ * Post layout
+ */
+
+&.hentry {
+	margin: 0 0 100px 120px;
+	max-width: $size__site-main;
+	overflow: hidden;
+}
+
+.entry-content {
+	float: none;
+	margin: 0;
+	width: 100%;
+}
+
+.entry-content .wrapper {
+	margin: 0;
+}
+
+.entry-footer {
+	float: none;
+	overflow: hidden;
+	margin-top: 75px;
+	padding-left: 0;
+	width: 100%;
+}
+
+.entry-footer .meta-item {
+	display: inline-block;
+	width: 32%;
+}

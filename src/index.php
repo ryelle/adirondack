@@ -18,8 +18,6 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
-			<div class="grid">
-
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
@@ -32,8 +30,6 @@ get_header(); ?>
 				?>
 
 			<?php endwhile; ?>
-
-			</div><!-- /.grid -->
 
 			<?php adirondack_paging_nav(); ?>
 

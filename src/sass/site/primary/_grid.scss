@@ -1,5 +1,7 @@
-.grid {
-	overflow: hidden;
+.home, .archive {
+	.site-content {
+		background: $color__background-header;
+	}
 }
 
 .post-grid {

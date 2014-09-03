@@ -65,11 +65,6 @@
 			</div>
 		<?php endif; ?>
 
-		<div class="meta-item bookmark">
-			<h4 class="meta-title"><?php _e( 'Bookmark', 'adirondack' ); ?></h4>
-			<?php printf( '<a href="%s" rel="bookmark">%s</a>', esc_url( get_permalink() ), __( 'Permalink', 'adirondack' ) ); ?>
-		</div>
-
 		<?php edit_post_link( __( 'Edit this post', 'adirondack' ), '<div class="meta-item edit"><h4 class="meta-title">' . __( 'For the author', 'adirondack' ) . '</h4><span class="edit-link">', '</span></div>' ); ?>
 
 	</footer><!-- .entry-footer -->

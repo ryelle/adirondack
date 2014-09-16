@@ -31,7 +31,7 @@
 			<?php the_excerpt(); ?>
 		</div>
 
-		<span>View more</span>
+		<div class="link-button"><span>View more</span></div>
 	</a>
 </article><!-- #post-<?php the_ID(); ?> -->
 

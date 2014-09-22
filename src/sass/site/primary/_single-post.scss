@@ -19,6 +19,7 @@ body.no-image {
 .entry-image {
 	margin-bottom: 120px;
 	height: 100vh;
+	max-height: 800px;
 	background: no-repeat center;
 	background-size: cover;
 }

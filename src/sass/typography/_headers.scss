@@ -26,6 +26,16 @@ h4 {
 	text-transform: uppercase;
 }
 
+
+.site-header {
+	padding-top: 45px;
+
+	.site-branding {
+		float:left;
+		margin-top: -45px;
+	}
+}
+
 .site-title {
 	margin-bottom: 0;
 	padding-left: 60px;

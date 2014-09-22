@@ -26,17 +26,18 @@
 <div id="page" class="hfeed site">
 
 	<header id="masthead" class="site-header" role="banner">
+		<div class="site-branding">
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+		</div>
+
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle"><?php _e( 'Primary Menu', 'adirondack' ); ?></button>
+			<button class="menu-toggle"><?php _ex( 'Menu', 'primary menu label', 'adirondack' ); ?></button>
+			<div class="small-widgets-toggle widgets-toggle"><button class="dashicons-before dashicons-menu"><span class="screen-reader-text"><?php _e( 'Show Widgets', 'adirondack' ); ?></span></button></div>
 			<?php wp_nav_menu( array(
 				'theme_location' => 'primary',
 				'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s<li class="widgets-toggle"><button class="dashicons-before dashicons-menu"><span class="screen-reader-text">' . __( 'Show Widgets', 'adirondack' ) . '</span></button></li></ul>'
 			) ); ?>
 		</nav><!-- #site-navigation -->
-
-		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-		</div>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

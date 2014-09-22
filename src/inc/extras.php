@@ -108,11 +108,20 @@ add_action( 'wp', 'adirondack_setup_author' );
 
 /**
  * Shrink excerpt length
+ * @return int Number of words to display
  */
 function adirondack_excerpt_length( $len ) {
+	if ( ( 'status' == get_post_format() ) ) {
+		return 24;
+	}
 	return 12;
 }
 add_filter( 'excerpt_length', 'adirondack_excerpt_length', 999 );
+
+function adirondack_excerpt_more( $more ) {
+	return '&hellip;';
+}
+add_filter('excerpt_more', 'adirondack_excerpt_more');
 
 /**
  * Custom display for comments

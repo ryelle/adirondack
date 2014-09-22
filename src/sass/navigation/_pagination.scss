@@ -25,11 +25,17 @@
 .post-navigation {
 	a {
 		display: inline-block;
-		max-width: 100%;
 		padding: 5px 2em;
+		max-width: 100%;
 		@include link;
 		border: 3px solid $color__border-link;
 		border-radius: 20px;
+	}
+	.nav-previous a {
+		margin-right: 2px;
+	}
+	.nav-next a {
+		margin-left: 2px;
 	}
 }
 

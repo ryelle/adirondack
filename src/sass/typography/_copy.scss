@@ -89,3 +89,9 @@ big {
 .entry-footer {
 	@include font-size(1.4);
 }
+
+@media (max-width: 600px) {
+	.entry-content {
+		@include font-size( 1.5 );
+	}
+}

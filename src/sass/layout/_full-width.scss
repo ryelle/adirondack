@@ -3,7 +3,7 @@
  */
 
 &.hentry {
-	margin: 0 0 100px 120px;
+	margin: 0 60px 100px 120px;
 	max-width: $size__site-main;
 	overflow: hidden;
 }
@@ -28,5 +28,8 @@
 
 .entry-footer .meta-item {
 	display: inline-block;
+	box-sizing: border-box;
+	padding-right: 5px;
 	width: 32%;
+	vertical-align: top;
 }

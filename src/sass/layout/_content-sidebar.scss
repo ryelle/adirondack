@@ -3,9 +3,14 @@
  */
 
 .hentry {
-	margin: 0 0 100px 120px;
+	margin: 0 60px 100px 120px;
 	max-width: $size__site-main;
 	overflow: hidden;
+}
+
+&.has-comments .hentry {
+	// 80px: 60px comment bar + 20px space
+	margin-right: 80px !important;
 }
 
 .entry-content {
@@ -35,17 +40,19 @@
 }
 
 .post-navigation {
-	margin: 0 #{$size__site-sidebar} 0 0;
+	margin: 0;
 
 	.nav-links {
-		margin: 0 0 100px 120px;
+		margin: 0 20px 100px 120px;
 		max-width: $size__site-main;
 		overflow: hidden;
 	}
 }
 
-@media (max-width: 1030px) {
-	.hentry {
-		margin-left: 60px;
-	}
+&.no-comments .nav-links {
+	margin-right: 60px;
+}
+
+&.has-comments .post-navigation {
+	margin-right: 60px;
 }

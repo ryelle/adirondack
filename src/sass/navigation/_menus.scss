@@ -110,6 +110,7 @@
 
 button.menu-toggle {
 	padding: 10px;
+	font-size: 12px; // force px, not a relative size
 	box-shadow: none;
 	line-height: 1;
 
@@ -167,5 +168,10 @@ button.menu-toggle {
 		.widgets-toggle {
 			margin-top: 5px;
 		}
+	}
+}
+@media screen and (max-width: 600px) {
+	.main-navigation {
+		padding-right: 20px;
 	}
 }

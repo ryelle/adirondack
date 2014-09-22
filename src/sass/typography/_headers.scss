@@ -82,3 +82,15 @@ h4 {
 		margin-top: 0;
 	}
 }
+
+@media (max-width: 800px) {
+	.singular .entry-title {
+		margin-bottom: 40px;
+	}
+}
+
+@media (max-width: 450px) {
+	.site-title {
+		padding-left: 20px;
+	}
+}

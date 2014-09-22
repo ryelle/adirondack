@@ -12,6 +12,21 @@ dfn, cite, em, i {
 
 blockquote {
 	margin: 0 1.5em;
+	font-style: italic;
+	quotes: '\201c' "'";
+	p:first-of-type:before { content: open-quote; }
+}
+q {
+	quotes: '\201c' '\201d';
+	&:before { content: open-quote }
+	&:after { content: close-quote }
+}
+cite {
+	font-weight: bold;
+	&:before {
+		content: '\2015';
+		font-weight: normal;
+	}
 }
 
 address {

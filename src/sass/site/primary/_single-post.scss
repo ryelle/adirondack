@@ -18,10 +18,15 @@ body.no-image {
 
 .entry-image {
 	margin-bottom: 120px;
-	height: 100vh;
-	max-height: 800px;
-	background: no-repeat center;
-	background-size: cover;
+	padding-left: 120px;
+	background-color: $color__background-header;
+
+	&.full-width {
+		height: 100vh;
+		max-height: 800px;
+		background: no-repeat center;
+		background-size: cover;
+	}
 }
 
 .meta-item {
@@ -44,7 +49,7 @@ body.no-image {
 }
 
 @media (max-width: 600px) {
-	.entry-image {
+	.entry-image.full-width {
 		height: 50vh;
 		max-height: 400px;
 	}

@@ -6,9 +6,15 @@
 
 <?php if ( has_post_thumbnail() ) :
 	$image_id = get_post_thumbnail_id();
-	$url = wp_get_attachment_image_src( $image_id, 'full' ); ?>
-	<div class="entry-image" style="background-image:url('<?php echo esc_attr($url[0]); ?>');"></div>
-<?php else: ?>
+	$url = wp_get_attachment_image_src( $image_id, 'full' );
+
+	if ( $url[2] < 800 || $url[1] < 800 ) {
+		printf( '<div class="entry-image">%s</div>', get_the_post_thumbnail( get_the_ID(), 'full' ) );
+	} else {
+		printf( '<div class="entry-image full-width" style="background-image:url(\'%s\');"></div>', esc_attr( $url[0] ) );
+	}
+
+else: ?>
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->

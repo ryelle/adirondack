@@ -10,7 +10,7 @@
 
 &.has-comments .hentry {
 	// 80px: 60px comment bar + 20px space
-	margin-right: 80px !important;
+	margin-right: 80px;
 }
 
 .entry-content {
@@ -29,6 +29,10 @@
 	overflow: hidden;
 	padding-left: 75px;
 	width: $size__site-sidebar;
+
+	@media (max-width: 600px) {
+		margin-top: 30px;
+	}
 }
 
 .entry-content,
@@ -46,6 +50,15 @@
 		margin: 0 20px 100px 120px;
 		max-width: $size__site-main;
 		overflow: hidden;
+
+		@media (max-width: 800px) {
+			margin-left: 60px;
+		}
+
+		@media (max-width: 450px) {
+			margin-left: 20px;
+			margin-right: 20px;
+		}
 	}
 }
 
@@ -55,4 +68,8 @@
 
 &.has-comments .post-navigation {
 	margin-right: 60px;
+}
+
+@media (max-width: 600px) {
+	@import "layout/full-width";
 }

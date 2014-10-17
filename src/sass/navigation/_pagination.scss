@@ -39,6 +39,18 @@
 	}
 }
 
+.post-navigation {
+	@media (max-width: 450px) {
+		.nav-next,
+		.nav-previous {
+			width: 100%;
+		}
+		.nav-previous + .nav-next {
+			margin-top: 10px;
+		}
+	}
+}
+
 .comment-navigation {
 	width: 100%;
 

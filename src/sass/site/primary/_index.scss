@@ -1,0 +1,71 @@
+.home, .archive {
+	.site-content {
+		background: $color__background-header;
+	}
+}
+
+.sticky { /*! Not used */ }
+
+/* Single post in the grid */
+.post-grid {
+	background: white;
+	text-align: center;
+
+	.entry-link {
+		span {
+			display: inline-block;
+			padding: 5px 2em;
+			border: 3px solid $color__border-link;
+			border-radius: 20px;
+		}
+
+		&:hover, &:active, &:focus {
+			color: $color__link;
+		}
+	}
+}
+
+/* Elemets shared between has-image and no-image */
+.link-button {
+	position: absolute;
+	bottom: 3em;
+	left: 0;
+	width: 100%;
+}
+
+/* Styling that applies only to grid items with images */
+.has-image {
+	.entry-link:before {
+		background: fade-out( $color__overlay-post, 0.1 );
+		opacity: 0;
+		transition: opacity 0.35s;
+	}
+
+	&.hentry:hover .entry-link:before {
+		opacity: 1;
+	}
+
+	.entry-title,
+	.entry-summary {
+		opacity: 0;
+		transition: transform 0.35s, opacity 0.35s;
+		transform: translate3d(0,-50%,0);
+	}
+
+	&.hentry:hover .entry-title,
+	&.hentry:hover .entry-summary {
+		opacity: 1;
+		transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+	}
+
+	.link-button {
+		opacity: 0;
+		transition: transform 0.35s, opacity 0.35s;
+		transform: translate3d(0,50%,0);
+	}
+
+	&.hentry:hover .link-button {
+		opacity: 1;
+		transform: translate3d(0,0,0);
+	}
+}

@@ -1,8 +1,10 @@
 /**
- * Post layout
+ * Full-width post layout
+ * Triggered by some post formats, a page template, or screens <600px wide.
+ * Cannot have media queries in this file.
  */
 
-&.hentry {
+.hentry {
 	margin: 0 60px 100px 120px;
 	max-width: $size__site-main;
 	overflow: hidden;

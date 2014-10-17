@@ -1,27 +1,25 @@
 /*--------------------------------------------------------------
 10.1 Posts and pages
 --------------------------------------------------------------*/
-@import "primary/posts-and-pages";
 @import "layout/grid";
+@import "primary/index";
+@import "primary/archives";
+@import "primary/single-post";
 
 .singular {
 	@import "layout/content-sidebar";
 }
 
 .page-full-width {
-	article {
-		@import "layout/full-width";
-	}
+	@import "layout/full-width";
 }
 
 /*--------------------------------------------------------------
 10.2 Post Formats
 --------------------------------------------------------------*/
-.singular {
-	.format-image,
-	.format-video {
-		@import "layout/full-width";
-	}
+.single-format-image,
+.single-format-video {
+	@import "layout/full-width";
 }
 
 /*--------------------------------------------------------------
@@ -32,4 +30,23 @@
 /*--------------------------------------------------------------
 10.4 Responsive
 --------------------------------------------------------------*/
-@import "primary/responsive";
+.singular .hentry {
+	@media (max-width: 800px) {
+		margin-left: 60px;
+	}
+
+	@media (max-width: 600px) {
+		margin-bottom: 50px;
+	}
+
+	@media (max-width: 450px) {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+}
+
+@media (max-width: 450px) {
+	.singular .entry-footer .meta-item {
+		width: 48%;
+	}
+}

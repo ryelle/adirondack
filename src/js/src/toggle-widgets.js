@@ -39,6 +39,12 @@
 			$widgets.css({
 				transform: 'translate3d( 0, 0px, 0)'
 			});
+
+			// Widgets are visible, move focus to the first focusable element.
+			var element = $( document.getElementById( "secondary" ) ).find( 'a,select,input,button,textarea' );
+			if ( element.length ) {
+				element.first().focus();
+			}
 		}
 
 		/***

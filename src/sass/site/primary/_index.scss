@@ -41,7 +41,8 @@
 		transition: opacity 0.35s;
 	}
 
-	&.hentry:hover .entry-link:before {
+	&.hentry:hover .entry-link:before,
+	.entry-link:focus:before {
 		opacity: 1;
 	}
 
@@ -53,7 +54,9 @@
 	}
 
 	&.hentry:hover .entry-title,
-	&.hentry:hover .entry-summary {
+	&.hentry:hover .entry-summary,
+	.entry-link:focus .entry-title,
+	.entry-link:focus .entry-summary {
 		opacity: 1;
 		transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
 	}
@@ -64,7 +67,8 @@
 		transform: translate3d(0,50%,0);
 	}
 
-	&.hentry:hover .link-button {
+	&.hentry:hover .link-button,
+	.entry-link:focus .link-button {
 		opacity: 1;
 		transform: translate3d(0,0,0);
 	}

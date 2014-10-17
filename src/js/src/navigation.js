@@ -37,4 +37,10 @@
 		$( this ).parents('li').toggleClass( 'focus' );
 	} );
 
+	// Toggle the "long-title" class
+	var navButtonsWidth = $(".menu-toggle").outerWidth() + $(".small-widgets-toggle").outerWidth() + 30;
+	if ( ( $(".site-title").outerWidth() + navButtonsWidth ) > $(window).width() ) {
+		$( ".site-header" ).addClass('long-title');
+	}
+
 } )( jQuery );

@@ -12,8 +12,10 @@
  */
 function adirondack_jetpack_setup() {
 	add_theme_support( 'infinite-scroll', array(
-		'container' => 'main',
-		'footer'    => 'page',
+		'type'           => 'click',
+		'container'      => 'main',
+		'footer'         => 'page',
+		'posts_per_page' => 12,
 	) );
 }
 add_action( 'after_setup_theme', 'adirondack_jetpack_setup' );

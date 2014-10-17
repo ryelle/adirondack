@@ -5,8 +5,13 @@ a {
 		color: $color__link-visited;
 	}
 	&:hover,
-	&:focus,
 	&:active {
 		color: $color__link-hover;
+	}
+
+	&:focus {
+		color: $color__link-hover;
+		outline: none;
+		text-decoration: underline;
 	}
 }

@@ -31,6 +31,10 @@ body.no-image {
 	a {
 		text-decoration: none;
 	}
+
+	a:focus {
+		text-decoration: underline;
+	}
 }
 
 @media (max-width: 800px) {

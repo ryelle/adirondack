@@ -39,6 +39,11 @@
 			$body.addClass( 'right' );
 		} else {
 			$body.addClass( 'left' );
+			// Comments are visible, move focus to the first focusable element.
+			var element = $( document.getElementById( "comments" ) ).find( 'a,select,input,button,textarea' );
+			if ( element.length ) {
+				element.first().focus();
+			}
 		}
 
 		/***

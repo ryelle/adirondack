@@ -94,17 +94,6 @@ module.exports = function(grunt) {
 			}
 		},
 
-		pageres: {
-			dist: {
-				options: {
-					url: 'trunk.wordpress.dev',
-					sizes: ['320x480', '320x568', '768x1024'],
-					delay: '3',
-					dest: 'screenshots'
-				}
-			}
-		},
-
 		compress: {
 			main: {
 				options: {
@@ -134,8 +123,6 @@ module.exports = function(grunt) {
 	grunt.registerTask('dev',     ['sass:dev', 'autoprefixer:dev', 'concat:dev']);
 	grunt.registerTask('build',   ['clean:all', 'copy:all', 'sass:dist', 'autoprefixer:dist', 'concat:dist', 'clean:dist']);
 	grunt.registerTask('publish', ['build', 'compress:main']);
-
-	grunt.registerTask('screenshot', ['pageres']);
 
 	// Default task.
 	grunt.registerTask('default', ['dev']);

@@ -120,26 +120,50 @@ button.menu-toggle {
 }
 
 .toggled {
-	.menu-toggle {
-		display: block;
-		margin: -15px auto 15px;
+	.widgets-toggle {
+		display: none !important;
 	}
 	.small-widgets-toggle {
-		display: none;
+		display: inline-block !important;
 	}
 }
 
 @media screen and (max-width: 600px) {
-	.main-navigation ul {
-		display: none;
+
+	.nav-container {
+		position: relative;
 	}
 
 	.menu-toggle,
 	.small-widgets-toggle {
+		position: absolute;
+		top: 0;
+		right: 20px;
 		display: inline-block;
 	}
 
+	.menu-toggle {
+		right: 67px;
+	}
+
+	.long-title {
+		.nav-container {
+			clear: both;
+			min-height: 40px;
+		}
+	}
+
+	.main-navigation {
+		padding-right: 20px;
+	}
+
+	.main-navigation ul {
+		display: none;
+	}
+
 	.main-navigation.toggled {
+		margin-top: 30px;
+
 		ul {
 			display: block;
 		}
@@ -164,15 +188,5 @@ button.menu-toggle {
 			padding-top: 5px;
 			padding-bottom: 5px;
 		}
-
-		.widgets-toggle {
-			margin-top: 5px;
-		}
-	}
-}
-
-@media screen and (max-width: 600px) {
-	.main-navigation {
-		padding-right: 20px;
 	}
 }

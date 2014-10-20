@@ -8,5 +8,11 @@ textarea {
 }
 
 @import "buttons";
-
 @import "fields";
+
+.post-password-form {
+	input[type="submit"] {
+		margin-top: 10px;
+		padding: 0 30px;
+	}
+}

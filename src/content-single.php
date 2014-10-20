@@ -8,8 +8,10 @@
 	$image_id = get_post_thumbnail_id();
 	$url = wp_get_attachment_image_src( $image_id, 'full' );
 
-	if ( $url[2] < 800 || $url[1] < 800 ) {
+	if ( $url[1] < 800 ) { // Width
 		printf( '<div class="entry-image">%s</div>', get_the_post_thumbnail( get_the_ID(), 'full' ) );
+	} elseif ( $url[2] < 800 ) { // Height
+		printf( '<div class="entry-image panorama">%s</div>', get_the_post_thumbnail( get_the_ID(), 'full' ) );
 	} else {
 		printf( '<div class="entry-image full-width" style="background-image:url(\'%s\');"></div>', esc_attr( $url[0] ) );
 	}

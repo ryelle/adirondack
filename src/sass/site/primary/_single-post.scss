@@ -46,6 +46,11 @@ body.no-image {
 		}
 	}
 
+	&.panorama {
+		padding-left: 0;
+		text-align: center;
+	}
+
 	@media (max-width: 800px) {
 		margin-bottom: 60px;
 		padding-left: 0;

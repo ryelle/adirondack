@@ -1,0 +1,39 @@
+
+.page-header {
+	margin-bottom: 60px;
+	padding: 100px 20px 100px;
+}
+
+.search-form {
+	margin: 40px auto;
+	padding-left: 2em;
+	padding-right: 2em;
+	max-width: $size__site-main;
+	box-sizing: content-box;
+
+	input[type="submit"] {
+		clip: rect(1px, 1px, 1px, 1px);
+		position: absolute !important;
+		height: 1px;
+		width: 1px;
+		overflow: hidden;
+	}
+}
+
+.entry-title a {
+	text-decoration: none;
+}
+
+.hentry {
+	margin-left: auto !important;
+	margin-right: auto !important;
+	margin-bottom: 40px;
+	padding-left: 2em;
+	padding-right: 2em;
+	max-width: $size__site-main;
+
+	@media (max-width: 450px) {
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+}

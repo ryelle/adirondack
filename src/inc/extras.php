@@ -111,7 +111,9 @@ add_action( 'wp', 'adirondack_setup_author' );
  * @return int Number of words to display
  */
 function adirondack_excerpt_length( $len ) {
-	if ( ( 'status' == get_post_format() ) ) {
+	if ( is_search() ) {
+		return 48;
+	} elseif ( ( 'status' == get_post_format() ) ) {
 		return 24;
 	}
 	return 12;

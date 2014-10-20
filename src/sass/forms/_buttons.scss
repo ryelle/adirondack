@@ -16,26 +16,18 @@ input[type="submit"] {
 	@include font-size( 1.2 );
 	line-height: 40px;
 	padding: 0 15px;
-}
+	box-sizing: border-box;
 
-button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover {
-	background-color: $color__button-hover;
-	box-shadow: 0 2px 0 darken( $color__button-shadow, 10% );
-}
+	&:hover {
+		background-color: $color__button-hover;
+		box-shadow: 0 2px 0 darken( $color__button-shadow, 10% );
+	}
 
-button:focus,
-input[type="button"]:focus,
-input[type="reset"]:focus,
-input[type="submit"]:focus,
-button:active,
-input[type="button"]:active,
-input[type="reset"]:active,
-input[type="submit"]:active {
-	background-color: $color__button-hover;
-	box-shadow: 0 2px 0 darken( $color__button-shadow, 10% );
+	&:focus,
+	&:active {
+		background-color: $color__button-hover;
+		box-shadow: 0 2px 0 darken( $color__button-shadow, 10% );
+	}
 }
 
 .mejs-container button {

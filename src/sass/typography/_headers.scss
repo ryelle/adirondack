@@ -53,10 +53,23 @@ h4 {
 	}
 }
 
+.page-title {
+	margin: 0;
+	@include font-size( 2.8 );
+	line-height: 1.2;
+	text-transform: uppercase;
+}
+
+
 .entry-title {
 	color: $color__link;
 	@include font-size( 1.8 );
 	text-transform: uppercase;
+
+	.search & {
+		@include font-size( 2.8 );
+		line-height: 1.2;
+	}
 
 	.singular & {
 		@include font-size( 2.8 );

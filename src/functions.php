@@ -178,8 +178,9 @@ add_action( 'wp_enqueue_scripts', 'adirondack_fonts' );
  * Enqueue Google fonts style to admin screen for custom header display.
  */
 function adirondack_admin_fonts( $hook_suffix ) {
-	if ( 'appearance_page_custom-header' != $hook_suffix )
+	if ( ! in_array( $hook_suffix, array( 'appearance_page_custom-header', 'post-new.php', 'post.php' ) ) ) {
 		return;
+	}
 
 	adirondack_fonts();
 

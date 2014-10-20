@@ -9,11 +9,13 @@ html {
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
 
-@import "typography/typography";
-@import "elements/elements";
-
 body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	@include font-size(1.7);
 }
+
+@import "typography/typography";
+@import "elements/elements";
+
+

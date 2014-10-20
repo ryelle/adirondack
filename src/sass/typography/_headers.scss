@@ -1,9 +1,11 @@
 h1, h2, h3, h4, h5, h6 {
+	margin-top: 0;
 	margin-bottom: 0.75em;
 	font-family: $font__headers;
 	font-weight: 900;
 
-	.entry-content & {
+	.entry-content &,
+	#tinymce & {
 		color: $color__text-headers;
 	}
 }

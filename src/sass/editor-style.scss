@@ -1,0 +1,19 @@
+/**
+ * Adirondack editor styles
+ */
+
+html {
+	font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+}
+
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
+
+@import "typography/typography";
+@import "elements/elements";
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	@include font-size(1.7);
+}

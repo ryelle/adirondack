@@ -33,6 +33,9 @@ function adirondack_setup() {
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
 
+	// Add custom TinyMCE CSS
+	add_editor_style( array( 'editor-style.css', adirondack_fonts_url() ) );
+
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
@@ -135,15 +138,15 @@ function adirondack_fonts_url() {
 		$font_families = array();
 
 		if ( 'off' !== $mavenpro )
-			$font_families[] = 'Maven+Pro:400,500,700,900';
+			$font_families[] = urlencode( 'Maven Pro:400,500,700,900' );
 
 		if ( 'off' !== $ptserif )
-			$font_families[] = 'PT+Serif:400,700,400italic';
+			$font_families[] = urlencode( 'PT Serif:400,700,400italic' );
 
 		$protocol = is_ssl() ? 'https' : 'http';
 		$query_args = array(
 			'family' => implode( '|', $font_families ),
-			'subset' => 'latin,latin-ext',
+			'subset' => urlencode( 'latin,latin-ext' ),
 		);
 		$fonts_url = add_query_arg( $query_args, "$protocol://fonts.googleapis.com/css" );
 	}
@@ -182,31 +185,6 @@ function adirondack_admin_fonts( $hook_suffix ) {
 
 }
 add_action( 'admin_enqueue_scripts', 'adirondack_admin_fonts' );
-
-/**
- * Adds additional stylesheets to the TinyMCE editor if needed.
- *
- * @uses adirondack_fonts_url() to get the Google Font stylesheet URL.
- *
- * @since Adirondack 1.0
- *
- * @param string $mce_css CSS path to load in TinyMCE.
- * @return string
- */
-function adirondack_mce_css( $mce_css ) {
-	$fonts_url = adirondack_fonts_url();
-
-	if ( empty( $fonts_url ) )
-		return $mce_css;
-
-	if ( ! empty( $mce_css ) )
-		$mce_css .= ',';
-
-	$mce_css .= esc_url_raw( str_replace( ',', '%2C', $fonts_url ) );
-
-	return $mce_css;
-}
-add_filter( 'mce_css', 'adirondack_mce_css' );
 
 /**
  * Implement the Custom Header feature.

@@ -84,6 +84,13 @@
 		color: $color__text-comment-title;
 	}
 
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	textarea {
+		background-color: $color__background-body;
+	}
+
 	.comment-form-comment {
 		margin-bottom: 0;
 	}

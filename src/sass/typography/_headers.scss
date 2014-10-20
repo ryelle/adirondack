@@ -26,6 +26,14 @@ h4 {
 	text-transform: uppercase;
 }
 
+h5 {
+	@include font-size( 1.7 );
+}
+
+h6 {
+	@include font-size( 1.7 );
+}
+
 
 .site-header {
 	padding-top: 45px;

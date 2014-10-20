@@ -1,0 +1,39 @@
+/**
+ * Center the main content
+ */
+
+.hentry {
+	margin-left: auto !important;
+	margin-right: auto !important;
+	padding-left: 2em;
+	padding-right: 2em;
+
+	@media (max-width: 450px) {
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+}
+
+&.has-comments .hentry {
+	// 80px: 60px comment bar + 20px space
+	margin-right: auto;
+	padding-right: 80px;
+}
+
+&.no-image {
+	.entry-header {
+		padding-left: 80px;
+		padding-right: 80px;
+		text-align: center;
+
+		.entry-title {
+			max-width: 100%;
+		}
+	}
+}
+
+.entry-image {
+	padding-left: 0px;
+	padding-right: 0px;
+	text-align: center;
+}

@@ -34,6 +34,11 @@
 
 	a {
 		color: $color__text-widget;
+
+		&:hover,
+		&:focus {
+			color: $color__background-screen;
+		}
 	}
 
 	/* Make sure select elements fit in widgets */

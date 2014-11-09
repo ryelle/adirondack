@@ -49,6 +49,8 @@ else: ?>
 			/* translators: used between list items, there is a space after the comma */
 			$tag_list = get_the_tag_list( '', __( ', ', 'adirondack' ) );
 
+			$format = get_post_format();
+
 			adirondack_posted_on();
 		?>
 
@@ -63,6 +65,13 @@ else: ?>
 			<div class="meta-item categories">
 				<h4 class="meta-title"><?php _e( 'Categories', 'adirondack' ); ?></h4>
 				<?php echo $category_list; ?>
+			</div>
+		<?php endif; ?>
+
+		<?php if ( '' != $format ) : ?>
+			<div class="meta-item format">
+				<h4 class="meta-title"><?php _e( 'Format', 'adirondack' ); ?></h4>
+				<?php printf( '<a href="%s">%s</a>', get_post_format_link( $format ), get_post_format_string( $format ) ); ?>
 			</div>
 		<?php endif; ?>
 

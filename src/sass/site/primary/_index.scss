@@ -1,4 +1,6 @@
-.home, .archive {
+/* Lists of posts, not the page-as-front. */
+.home:not(.page),
+.archive {
 	.site-content {
 		background: $color__background-header;
 	}

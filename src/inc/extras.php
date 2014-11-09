@@ -38,10 +38,6 @@ function adirondack_body_classes( $classes ) {
 			$classes[] = 'no-image';
 		}
 
-		if ( 'page-fullwidth.php' == get_page_template_slug() ) {
-			$classes[] = 'page-full-width';
-		}
-
 		if ( comments_open() || '0' != get_comments_number() ) {
 			$classes[] = 'has-comments';
 		} else {

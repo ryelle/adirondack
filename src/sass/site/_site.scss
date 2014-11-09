@@ -10,12 +10,9 @@
 	@import "layout/content-sidebar";
 }
 
-.page-full-width {
-	@import "layout/full-width";
-}
-
 .page {
 	@import "layout/center-page";
+	@import "layout/full-width";
 }
 
 .search {

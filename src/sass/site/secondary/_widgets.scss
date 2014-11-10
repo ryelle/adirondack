@@ -9,6 +9,7 @@
 	background: $color__background-widgets;
 
 	.wrapper {
+		width: 100%;
 		@include clearfix;
 	}
 
@@ -31,6 +32,23 @@
 	color: $color__text-widget;
 	@include font-size(1.4);
 	font-style: italic;
+
+	.count-1 & {
+		width: 100%;
+	}
+
+	.count-2 & {
+		width: 50%;
+	}
+
+	.count-3 & {
+		width: 33%;
+	}
+
+	&:nth-of-type(4n+5) {
+		clear: left;
+		padding-top: 0;
+	}
 
 	a {
 		color: $color__text-widget;
@@ -66,7 +84,8 @@
 }
 
 @media (max-width: 800px) {
-	.widget {
+	.widget,
+	.count-3 .widget {
 		width: 50%;
 	}
 	.widget:nth-of-type(n+3) {
@@ -78,7 +97,7 @@
 	.widget {
 		padding-left: 0;
 		padding-right: 0;
-		width: 100%;
+		width: 100% !important;
 	}
 	.widget:nth-of-type(n+2) {
 		padding-top: 0;

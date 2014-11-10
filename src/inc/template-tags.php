@@ -119,11 +119,25 @@ function adirondack_posted_on() {
 		echo '<span class="posted-on">' . $time_string . '</span>';
 		echo '</div>';
 	}
-
-
-
 }
 endif;
+
+/**
+ * Output the class attribute, to be used on the widget container.
+ *
+ * @return void
+ */
+function adirondack_widgets_class( $extra_classes = '' ){
+	$classes = array( 'widget-area', $extra_classes );
+
+	$widgets = wp_get_sidebars_widgets();
+	$widget_count = isset( $widgets['sidebar-1'] )? count( $widgets['sidebar-1'] ): 0;
+	$classes[] = 'count-' . $widget_count;
+
+	$classes = apply_filters( 'adirondack_widgets_class', $classes );
+
+	printf( 'class="%s"', esc_attr( implode( ' ', $classes ) ) );
+}
 
 /**
  * Returns true if a blog has more than 1 category.

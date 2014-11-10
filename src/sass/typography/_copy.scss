@@ -108,7 +108,7 @@ big {
 	font-style: italic;
 	color: $color__text-excerpt;
 
-	.has-image & {
+	.has-post-thumbnail & {
 		color: $color__link;
 	}
 }

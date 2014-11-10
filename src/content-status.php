@@ -9,7 +9,7 @@
 	$url = wp_get_attachment_image_src( $image_id, 'post-thumbnail' );
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'has-image post-grid' ); ?> style="background: url(<?php echo esc_attr( $url[0] ); ?>) no-repeat center; background-size: cover;">
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> style="background: url(<?php echo esc_attr( $url[0] ); ?>) no-repeat center; background-size: cover;">
 	<a href="<?php the_permalink(); ?>" rel="bookmark" class="entry-link">
 		<div class="entry-summary">
 			<?php the_excerpt(); ?>
@@ -21,7 +21,7 @@
 
 <?php else: ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'no-image post-grid' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<a href="<?php the_permalink(); ?>" rel="bookmark" class="entry-link">
 		<div class="entry-summary">
 			<?php the_excerpt(); ?>

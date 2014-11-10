@@ -34,7 +34,7 @@
 	}
 }
 
-/* Elemets shared between has-image and no-image */
+/* Elemets shared between has-post-thumbnail and no-image */
 .entry-link {
 	@include fill-container;
 	display: block;
@@ -50,7 +50,7 @@
 }
 
 /* Styling that applies only to grid items with images */
-.has-image {
+.has-post-thumbnail {
 	.entry-link:before {
 		@include fill-container;
 		content: '';

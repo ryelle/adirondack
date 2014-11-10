@@ -50,6 +50,28 @@ function adirondack_body_classes( $classes ) {
 add_filter( 'body_class', 'adirondack_body_classes' );
 
 /**
+ * Adds custom classes to the array of post classes.
+ *
+ * @param array $classes Classes for the post's article element.
+ * @return array
+ */
+function adirondack_post_classes( $classes ) {
+	if ( is_home() || is_archive() ) {
+		$classes[] = 'post-grid';
+
+		if ( ! has_post_thumbnail() ) {
+			$classes[] = 'no-image';
+		} else {
+			// Back-compat for <3.9, when .has-post-thumbnail was introduced.
+			$classes[] = 'has-post-thumbnail';
+		}
+	}
+
+	return $classes;
+}
+add_filter( 'post_class', 'adirondack_post_classes' );
+
+/**
  * Filters wp_title to print a neat <title> tag based on what is being viewed.
  *
  * @param string $title Default title text for current view.

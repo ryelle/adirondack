@@ -37,6 +37,8 @@
 
 /* Styling that applies only to grid items with images */
 .post-grid.has-post-thumbnail {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+
 	.entry-link:before {
 		background: fade-out( $color__overlay-post, 0.1 );
 		opacity: 0;
@@ -73,14 +75,5 @@
 	.entry-link:focus .link-button {
 		opacity: 1;
 		transform: translate3d(0,0,0);
-	}
-
-	@media (max-width: 800px) {
-		.entry-title,
-		.entry-summary,
-		.link-button,
-		.entry-link:before {
-			transition: none;
-		}
 	}
 }

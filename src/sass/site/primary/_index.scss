@@ -74,4 +74,13 @@
 		opacity: 1;
 		transform: translate3d(0,0,0);
 	}
+
+	@media (max-width: 800px) {
+		.entry-title,
+		.entry-summary,
+		.link-button,
+		.entry-link:before {
+			transition: none;
+		}
+	}
 }

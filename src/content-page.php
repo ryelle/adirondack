@@ -8,12 +8,12 @@
 
 <?php if ( has_post_thumbnail() ) :
 	$image_id = get_post_thumbnail_id();
-	$url = wp_get_attachment_image_src( $image_id, 'full' );
+	$url = wp_get_attachment_image_src( $image_id, 'header-image' );
 
 	if ( $url[1] < 800 ) { // Width
-		printf( '<div class="entry-image">%s</div>', get_the_post_thumbnail( get_the_ID(), 'full' ) );
+		printf( '<div class="entry-image">%s</div>', get_the_post_thumbnail( get_the_ID(), 'header-image' ) );
 	} elseif ( $url[2] < 800 ) { // Height
-		printf( '<div class="entry-image panorama">%s</div>', get_the_post_thumbnail( get_the_ID(), 'full' ) );
+		printf( '<div class="entry-image panorama">%s</div>', get_the_post_thumbnail( get_the_ID(), 'header-image' ) );
 	} else {
 		printf( '<div class="entry-image full-width" style="background-image:url(\'%s\');"></div>', esc_attr( $url[0] ) );
 	}

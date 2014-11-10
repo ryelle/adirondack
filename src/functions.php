@@ -43,6 +43,7 @@ function adirondack_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 670, 500, true );
+	add_image_size( 'header-image', 2000, 9999 );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(

@@ -163,6 +163,7 @@ button.menu-toggle {
 
 	.main-navigation.toggled {
 		margin-top: 30px;
+		padding-left: 45px;
 
 		ul {
 			display: block;
@@ -188,5 +189,11 @@ button.menu-toggle {
 			padding-top: 5px;
 			padding-bottom: 5px;
 		}
+	}
+}
+
+@media (max-width: 450px) {
+	.main-navigation.toggled {
+		padding-left: 5px;
 	}
 }

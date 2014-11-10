@@ -34,6 +34,13 @@
 	}
 }
 
+.featured-post {
+	.entry-link:before {
+		@include fill-container;
+		content: '';
+	}
+}
+
 /* Elemets shared between has-post-thumbnail and no-image */
 .entry-link {
 	@include fill-container;

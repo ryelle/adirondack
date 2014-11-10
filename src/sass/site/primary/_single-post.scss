@@ -29,6 +29,20 @@ body.no-image {
 	}
 }
 
+.featured-post {
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	height: 80vh;
+	max-height: 800px;
+
+	.entry-header {
+		position: absolute;
+		bottom: 2em;
+		left: 2em;
+	}
+}
+
 .entry-image {
 	margin-bottom: 120px;
 	padding-left: 120px;

@@ -77,3 +77,28 @@
 		transform: translate3d(0,0,0);
 	}
 }
+
+.featured-post {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+
+	.entry-link:before {
+		background: rgba( $color__overlay-post, 0.55 );
+		opacity: 0;
+		transition: opacity 0.35s;
+	}
+
+	&.hentry:hover .entry-link:before,
+	.entry-link:focus:before {
+		opacity: 1;
+	}
+
+	.entry-title {
+		opacity: 0;
+		transition: opacity 0.35s;
+	}
+
+	&.hentry:hover .entry-title,
+	.entry-link:focus .entry-title {
+		opacity: 1;
+	}
+}

@@ -56,8 +56,14 @@ add_filter( 'body_class', 'adirondack_body_classes' );
  * @return array
  */
 function adirondack_post_classes( $classes ) {
+	global $in_featured;
+
 	if ( is_home() || is_archive() ) {
-		$classes[] = 'post-grid';
+		if ( isset( $in_featured ) && $in_featured ) {
+			$classes[] = 'featured-post';
+		} else {
+			$classes[] = 'post-grid';
+		}
 
 		if ( ! has_post_thumbnail() ) {
 			$classes[] = 'no-image';

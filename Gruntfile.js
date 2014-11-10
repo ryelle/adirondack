@@ -41,7 +41,8 @@ module.exports = function(grunt) {
 						'!node_modules',
 						'!.sass-cache',
 						'!.gitignore',
-						'!js/src'
+						'!js/src',
+						'!images/src'
 					],
 					dest: BUILD_DIR
 				}]
@@ -110,6 +111,10 @@ module.exports = function(grunt) {
 				src: [SOURCE_DIR + 'images/src/*.svg', '!' + SOURCE_DIR + 'images/src/_*.svg'],
 				dest: SOURCE_DIR + 'images/sprite.svg'
 			},
+			dist: {
+				src: [SOURCE_DIR + 'images/src/*.svg', '!' + SOURCE_DIR + 'images/src/_*.svg'],
+				dest: BUILD_DIR + 'images/sprite.svg'
+			},
 		},
 
 		compress: {
@@ -139,7 +144,7 @@ module.exports = function(grunt) {
 
 	// Build task.
 	grunt.registerTask('dev',     ['sass:dev', 'autoprefixer:dev', 'concat:dev', 'svgstore:dev']);
-	grunt.registerTask('build',   ['clean:all', 'copy:all', 'sass:dist', 'autoprefixer:dist', 'concat:dist', 'clean:dist']);
+	grunt.registerTask('build',   ['clean:all', 'copy:all', 'sass:dist', 'autoprefixer:dist', 'concat:dist', 'svgstore:dist', 'clean:dist']);
 	grunt.registerTask('publish', ['build', 'compress:main']);
 
 	// Default task.

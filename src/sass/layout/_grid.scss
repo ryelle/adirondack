@@ -50,7 +50,7 @@
 }
 
 /* Styling that applies only to grid items with images */
-.has-post-thumbnail {
+.post-grid.has-post-thumbnail {
 	.entry-link:before {
 		@include fill-container;
 		content: '';

@@ -94,6 +94,24 @@ module.exports = function(grunt) {
 			}
 		},
 
+		svgstore: {
+			options: {
+				prefix : 'icon-',
+				cleanup: true,
+				includedemo: false,
+				svg: {
+					viewBox : '0 0 0 0'
+				},
+				symbol: {
+					fill: 'white'
+				}
+			},
+			dev: {
+				src: [SOURCE_DIR + 'images/src/*.svg', '!' + SOURCE_DIR + 'images/src/_*.svg'],
+				dest: SOURCE_DIR + 'images/sprite.svg'
+			},
+		},
+
 		compress: {
 			main: {
 				options: {
@@ -120,7 +138,7 @@ module.exports = function(grunt) {
 	// Register tasks.
 
 	// Build task.
-	grunt.registerTask('dev',     ['sass:dev', 'autoprefixer:dev', 'concat:dev']);
+	grunt.registerTask('dev',     ['sass:dev', 'autoprefixer:dev', 'concat:dev', 'svgstore:dev']);
 	grunt.registerTask('build',   ['clean:all', 'copy:all', 'sass:dist', 'autoprefixer:dist', 'concat:dist', 'clean:dist']);
 	grunt.registerTask('publish', ['build', 'compress:main']);
 

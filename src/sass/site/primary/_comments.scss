@@ -121,8 +121,6 @@
 	right: 15px;
 	width: 30px;
 	height: 35px;
-	background: url('images/comment.png') no-repeat center;
-	background-size: contain;
 }
 
 .toggle-comments {
@@ -136,18 +134,20 @@
 	right: 15px;
 	width: 30px;
 	height: 8px;
-	padding: 15px 0;
-	background: url('images/arrows-open.png') no-repeat center;
-	background-size: contain;
-	transition: background-image 0.1s linear;
 
-	.animating.left &,
-	.comments-visible & {
-		background-image: url('images/arrows-close.png');
-	}
+	path {
+		fill: white;
+		transition: transform 0.1s linear;
+		transform-origin: 50% 50%;
 
-	.animating.right & {
-		background-image: url('images/arrows-open.png');
+		.animating.left &,
+		.comments-visible & {
+			transform: rotate(180deg);
+		}
+
+		.animating.right & {
+			transform: rotate(0deg);
+		}
 	}
 }
 

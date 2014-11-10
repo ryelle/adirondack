@@ -80,6 +80,8 @@
 
 	button {
 		padding: 6px;
+		width: 32px;
+		height: 32px;
 		box-shadow: none;
 		line-height: 1;
 
@@ -87,16 +89,22 @@
 			outline: none;
 		}
 	}
+
+	.x {
+		display: none;
+	}
 }
 
 .widgets-animating,
 .widgets-visible {
 	.widgets-toggle button {
 		background-color: $color__button-focus;
-
-		&:before {
-			content: "\f335";
-		}
+	}
+	.x {
+		display: block;
+	}
+	.ellipsis {
+		display: none;
 	}
 }
 

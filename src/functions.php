@@ -97,7 +97,7 @@ add_action( 'widgets_init', 'adirondack_widgets_init' );
  * Enqueue scripts and styles.
  */
 function adirondack_scripts() {
-	wp_enqueue_style( 'adirondack-style', get_stylesheet_uri(), array('dashicons') );
+	wp_enqueue_style( 'adirondack-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'adirondack-scripts', get_template_directory_uri() . '/js/adirondack.js', array( 'jquery' ), '20120206', true );
 

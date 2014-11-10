@@ -19,6 +19,8 @@
 </head>
 
 <body <?php body_class(); ?>>
+<?php do_action( 'adirondack_load_svg' ); ?>
+
 <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'adirondack' ); ?></a>
 
 <?php get_sidebar(); ?>
@@ -33,10 +35,13 @@
 		<div class="nav-container">
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle"><?php _ex( 'Menu', 'primary menu label', 'adirondack' ); ?></button>
-			<div class="small-widgets-toggle widgets-toggle"><button class="dashicons-before dashicons-menu"><span class="screen-reader-text"><?php _e( 'Show Widgets', 'adirondack' ); ?></span></button></div>
+			<div class="small-widgets-toggle widgets-toggle"><button>
+				<svg class="ellipsis"><use xlink:href="#icon-ellipsis" /></svg>
+				<svg class="x"><use xlink:href="#icon-x" /></svg>
+			</button></div>
 			<?php wp_nav_menu( array(
 				'theme_location' => 'primary',
-				'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s<li class="widgets-toggle"><button class="dashicons-before dashicons-menu"><span class="screen-reader-text">' . __( 'Show Widgets', 'adirondack' ) . '</span></button></li></ul>'
+				'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s<li class="widgets-toggle"><button><svg><svg class="ellipsis"><use xlink:href="#icon-ellipsis" /></svg><svg class="x"><use xlink:href="#icon-x" /></svg></svg></button></li></ul>'
 			) ); ?>
 		</nav><!-- #site-navigation -->
 		</div>

@@ -125,6 +125,40 @@ function adirondack_setup_author() {
 add_action( 'wp', 'adirondack_setup_author' );
 
 /**
+ * Get the bare-minimum attributes for our SVG file, so we have some
+ * control over our output.
+ *
+ * @return  array  Array of tags => properties that will be used in wp_kses.
+ */
+function adirondack_allowed_svg(){
+	$allowed_svg = array(
+		'svg' => array( 'viewbox' => true ),
+		'symbol' => array( 'viewbox' => true, 'id' => true, 'fill' => true ),
+		'title' => array(),
+		'polygon' => array( 'points' => true ),
+		'path' => array( 'd' => true ),
+	);
+	return apply_filters( 'adirondack_allowed_svg', $allowed_svg );
+}
+
+/**
+ * Load the SVG file in the header, right after the <body> tag.
+ * To load your own icons in a child theme, you can remove this using
+ *  `remove_action( 'adirondack_load_svg', 'adirondack_load_svg' );
+ * and add your own SVG sprite using the `adirondack_load_svg` hook.
+ */
+function adirondack_load_svg() {
+	ob_start();
+	include_once( get_template_directory() . '/images/sprite.svg' );
+	$svg = ob_get_clean();
+
+	$svg = wp_kses( $svg, adirondack_allowed_svg() );
+
+	printf( '<div style="display:none">%s</div>', $svg );
+}
+add_action( 'adirondack_load_svg', 'adirondack_load_svg' );
+
+/**
  * Shrink excerpt length
  * @return int Number of words to display
  */

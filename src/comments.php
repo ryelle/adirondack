@@ -20,12 +20,14 @@ if ( post_password_required() ) {
 
 <div id="comments-bg"></div>
 <div id="comments-container">
-	<div class="toggle-comments comments-icon"></div>
-	<a href="#" class="toggle-comments icon"></a>
+	<div class="toggle-comments comments-icon">
+		<svg class="comment"><use xlink:href="#icon-comment" /></svg>
+	</div>
+	<a href="#" class="toggle-comments icon">
+		<svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="42.5" height="11" viewBox="0 0 42.5 11" xml:space="preserve"><path d="M 7.5,0 0,5.5 7.5,11 z" /><path d="M 17.5,5.5 25,11 25,0 z" /><path d="M 42.5,0 35,5.5 42.5,11 z" /></svg>
+	</a>
 
 	<div id="comments" class="comments-area">
-
-		<?php // You can start editing here -- including this comment! ?>
 
 		<?php if ( have_comments() ) : ?>
 			<h3 class="comments-title">

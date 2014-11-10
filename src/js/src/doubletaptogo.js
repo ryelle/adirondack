@@ -38,6 +38,8 @@
 		return this;
 	};
 
-	$( '#site-navigation li:has(ul)' ).doubleTapToGo();
+	if ( $( window ).width() > 800 ) {
+		$( '#site-navigation li:has(ul)' ).doubleTapToGo();
+	}
 	$( '.has-post-thumbnail' ).doubleTapToGo();
 })( jQuery, window, document );

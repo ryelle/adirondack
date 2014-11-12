@@ -161,6 +161,7 @@
 		fill: white;
 		transition: transform 0.1s linear;
 		transform-origin: 50% 50%;
+		-moz-transform-origin: 0 0;
 
 		.animating.left &,
 		.comments-visible & {

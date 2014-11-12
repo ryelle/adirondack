@@ -30,6 +30,7 @@
 					$widgets.css({
 						transform: 'translate3d( 0, -' + $widgets.height() + 'px, 0)'
 					});
+					$( window ).scrollTop( 0 );
 					$( document ).off( 'keyup', widgets.keyToggle );
 				} else {
 					$page.css({

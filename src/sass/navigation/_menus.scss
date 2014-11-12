@@ -1,6 +1,7 @@
 .main-navigation {
 	float: right;
 	padding: 0 40px 30px 0;
+	min-height: 55px;
 
 	font-family: $font__headers;
 	@include font-size(1.5);
@@ -150,7 +151,7 @@ button.menu-toggle {
 		display: inline-block;
 	}
 
-	.menu-toggle {
+	.has-widgets .menu-toggle {
 		right: 67px;
 	}
 

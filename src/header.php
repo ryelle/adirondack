@@ -33,15 +33,17 @@
 		</div>
 
 		<div class="nav-container">
-		<nav id="site-navigation" class="main-navigation" role="navigation">
+		<?php $button = '';
+		if ( is_active_sidebar( 'sidebar-1' ) ) {
+			$button = '<button><svg class="ellipsis"><use xlink:href="#icon-ellipsis" /></svg><svg class="x"><use xlink:href="#icon-x" /></svg></button>';
+		}
+		?>
+		<nav id="site-navigation" class="main-navigation <?php echo $button? 'has-widgets': 'no-widgets'; ?>" role="navigation">
 			<button class="menu-toggle"><?php _ex( 'Menu', 'primary menu label', 'adirondack' ); ?></button>
-			<div class="small-widgets-toggle widgets-toggle"><button>
-				<svg class="ellipsis"><use xlink:href="#icon-ellipsis" /></svg>
-				<svg class="x"><use xlink:href="#icon-x" /></svg>
-			</button></div>
+			<div class="small-widgets-toggle widgets-toggle"><?php echo $button; ?></div>
 			<?php wp_nav_menu( array(
 				'theme_location' => 'primary',
-				'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s<li class="widgets-toggle"><button><svg><svg class="ellipsis"><use xlink:href="#icon-ellipsis" /></svg><svg class="x"><use xlink:href="#icon-x" /></svg></svg></button></li></ul>'
+				'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s<li class="widgets-toggle">' . $button . '</li></ul>'
 			) ); ?>
 		</nav><!-- #site-navigation -->
 		</div>

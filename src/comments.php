@@ -69,7 +69,7 @@ if ( post_password_required() ) {
 		<?php comment_form( array(
 			'comment_notes_after' => '',
 			'comment_notes_before' => '',
-			'comment_field' => '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) . '</label><div class="comment-wrap"><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></div></p>',
+			'comment_field' => '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun', 'adirondack' ) . '</label><div class="comment-wrap"><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></div></p>',
 		) ); ?>
 
 	</div><!-- #comments -->

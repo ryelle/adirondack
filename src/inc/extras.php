@@ -212,9 +212,33 @@ function adirondack_handle_comment( $comment, $args, $depth ){
  */
 function adirondack_ping( $comment, $args, $depth ){ ?>
 	<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
-	<div class="comment-body">
-		<?php _e( 'Pingback:' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit' ), '<span class="edit-link">', '</span>' ); ?>
-	</div>
+	<article class="comment-body">
+		<svg class="avatar"><use xlink:href="#icon-pingback" /></svg>
+
+		<div class="comment-content">
+			<?php comment_author_link(); ?>
+			<footer class="comment-meta">
+				<?php if ( '0' == $comment->comment_approved ) : ?>
+				<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'adirondack' ); ?></p>
+				<?php endif; ?>
+
+				<div class="comment-metadata">
+					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID, $args ) ); ?>">
+					<?php if ( strtotime( 'last week' ) < get_comment_time( 'U' ) ): // more recent than 1 week ago ?>
+						<time datetime="<?php comment_time( 'c' ); ?>">
+							<?php printf( __( '%1$s ago', 'adirondack' ), human_time_diff( get_comment_time( 'U' ) ) ); ?>
+						</time>
+					<?php else: ?>
+						<time datetime="<?php comment_time( 'c' ); ?>">
+							<?php printf( _x( '%1$s at %2$s', '1: date, 2: time', 'adirondack' ), get_comment_date(), get_comment_time() ); ?>
+						</time>
+					<?php endif; ?>
+					</a>
+					<?php edit_comment_link( __( 'Edit', 'adirondack' ), '<span class="edit-link">', '</span>' ); ?>
+				</div><!-- .comment-metadata -->
+			</footer><!-- .comment-meta -->
+		</div><!-- .comment-content -->
+	</article><!-- .comment-body -->
 <?php
 }
 

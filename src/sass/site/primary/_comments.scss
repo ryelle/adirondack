@@ -59,12 +59,34 @@
 	}
 }
 
-.comment article {
-	min-height: 50px;
-	margin-bottom: 30px;
+.pingback {
+	.avatar {
+		float: left;
+		height: 50px;
+		width: 50px;
+		background-color: $color__background-avatar;
+		border-radius: 5px;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	a:hover,
+	a:active,
+	a:focus {
+		color: $color__link;
+		text-decoration: underline;
+	}
+
+	a[rel*="external"] {
+		font-style: italic;
+	}
 }
 
-.pingback .comment-body {
+.comment article,
+.pingback article {
+	min-height: 50px;
 	margin-bottom: 30px;
 }
 

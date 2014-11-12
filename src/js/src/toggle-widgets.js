@@ -52,6 +52,7 @@
 				if ( $body.hasClass( 'widgets-visible' ) ) {
 					$page.attr( 'style', 'transform: translate( 0, 0 );' );
 					$widgets.attr( 'style', 'transform: translate( 0, -' + $widgets.height() + 'px)' );
+					$( window ).scrollTop( 0 );
 					$( document ).off( 'keyup', widgets.keyToggle );
 				} else {
 					$page.attr( 'style', 'transform: translate( 0, ' + $widgets.height() + 'px)' );

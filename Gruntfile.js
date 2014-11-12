@@ -136,6 +136,10 @@ module.exports = function(grunt) {
 			js: {
 				files: [SOURCE_DIR + 'js/src/**'],
 				tasks: ['concat:dev']
+			},
+			svg: {
+				files: [SOURCE_DIR + 'images/src/**'],
+				tasks: ['svgstore:dev']
 			}
 		}
 	});

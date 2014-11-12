@@ -70,5 +70,9 @@
 		left: 0;
 		width: 100%;
 		padding: 0 2em;
+
+		.modrn-no-csstransforms3d & {
+			top: 2em;
+		}
 	}
 }

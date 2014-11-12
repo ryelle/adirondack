@@ -52,7 +52,21 @@
 		 * either add or remove the "menu-visible" class
 		 * depending whether it was visible or not previously.
 		 */
-		$comments.on( transitionEnd, function() {
+		if ( Modernizr.csstransitions ) {
+			$comments.on( transitionEnd, function() {
+				$body
+					.removeClass( 'animating left right' )
+					.toggleClass( 'comments-visible' );
+
+				if ( ! $body.hasClass('comments-visible' ) ) {
+					$comments.css({ backgroundColor: 'transparent' });
+					$( '#comments-bg' ).css({ backgroundColor: 'rgba(44, 54, 66, 0.9)' });
+				}
+
+				$comments.off( transitionEnd );
+			} );
+		} else {
+			// We don't have transitions, so there is no animation.
 			$body
 				.removeClass( 'animating left right' )
 				.toggleClass( 'comments-visible' );
@@ -61,12 +75,10 @@
 				$comments.css({ backgroundColor: 'transparent' });
 				$( '#comments-bg' ).css({ backgroundColor: 'rgba(44, 54, 66, 0.9)' });
 			}
-
-			$comments.off( transitionEnd );
-		} );
+		}
 
 		// If we've clicked the text link, we should change the URL and jump to the top of the comments
-		if ( e.target.className.indexOf('text') !== -1 ) {
+		if ( e.target.className.length && e.target.className.indexOf('text') !== -1 ) {
 			if ( ! $body.hasClass( 'comments-visible' ) ){
 				location.hash = '#comments';
 				$( window ).scrollTop( $comments.offset().top );

@@ -23,6 +23,10 @@
 #secondary {
 	transform: translate3d( 0, 0, 0 );
 	transition: transform .2s cubic-bezier( .25,.1,.25,1 );
+
+	.modrn-no-csstransforms3d.modrn-csstransforms {
+		transform: translate( 0, 0 );
+	}
 }
 
 .widget {

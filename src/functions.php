@@ -65,12 +65,6 @@ function adirondack_setup() {
 	add_theme_support( 'post-formats', array(
 		'aside', 'status', 'image', 'gallery', 'video', 'audio', 'quote', 'link', 'chat'
 	) );
-
-	// Setup the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'adirondack_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
 }
 endif; // adirondack_setup
 add_action( 'after_setup_theme', 'adirondack_setup' );
@@ -187,11 +181,6 @@ function adirondack_admin_fonts( $hook_suffix ) {
 
 }
 add_action( 'admin_enqueue_scripts', 'adirondack_admin_fonts' );
-
-/**
- * Implement the Custom Header feature.
- */
-//require get_template_directory() . '/inc/custom-header.php';
 
 /**
  * Custom template tags for this theme.

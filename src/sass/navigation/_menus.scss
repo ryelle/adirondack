@@ -22,6 +22,8 @@
 			top: 15px;
 			padding: 43px 0 0;
 			@include hide-dropdown;
+			letter-spacing: 0;
+			text-transform: none;
 
 			// Third level
 			ul {
@@ -30,8 +32,13 @@
 				padding-top: 0;
 				@include show-dropdown;
 
-				li a {
-					padding-left: 20px;
+				li {
+					padding-top: 0 !important;
+					padding-bottom: 0 !important;
+
+					a {
+						padding-left: 20px;
+					}
 				}
 			}
 
@@ -39,11 +46,19 @@
 				padding: 0;
 				line-height: 1.25;
 				background-color: white;
+
+				&:first-of-type {
+					padding-top: 10px;
+				}
+
+				&:last-of-type {
+					padding-bottom: 10px;
+				}
 			}
 
 			a {
-				width: 200px;
-				padding: 5px 10px;
+				width: 225px;
+				padding: 5px 15px;
 			}
 		}
 	}

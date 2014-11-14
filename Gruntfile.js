@@ -52,17 +52,19 @@ module.exports = function(grunt) {
 		sass: {
 			dev: {
 				options: {
+					style: 'expanded',
 					noCache: false,
-					sourcemap: true
+					sourcemap: false
 				},
 				expand: true,
 				cwd: SOURCE_DIR + 'sass/',
 				dest: SOURCE_DIR,
 				ext: '.css',
-				src: [ 'style.scss', 'editor-style.scss' ]
+				src: [ 'style.scss', 'editor-style.scss', 'rtl.scss' ]
 			},
 			dist: {
 				options: {
+					style: 'expanded',
 					noCache: true,
 					sourcemap: false
 				},
@@ -70,17 +72,17 @@ module.exports = function(grunt) {
 				cwd: SOURCE_DIR + 'sass/',
 				dest: BUILD_DIR,
 				ext: '.css',
-				src: [ 'style.scss', 'editor-style.scss' ]
+				src: [ 'style.scss', 'editor-style.scss', 'rtl.scss' ]
 			}
 		},
 
 		autoprefixer: {
 			options: {},
 			dev: {
-				src: SOURCE_DIR + 'style.css'
+				src: [ SOURCE_DIR + 'style.css', SOURCE_DIR + 'editor-style.css', SOURCE_DIR + 'rtl.css' ]
 			},
 			dist: {
-				src: BUILD_DIR + 'style.css'
+				src: [ BUILD_DIR + 'style.css', BUILD_DIR + 'editor-style.css', BUILD_DIR + 'rtl.css' ]
 			}
 		},
 

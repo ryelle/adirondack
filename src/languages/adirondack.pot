@@ -1,16 +1,28 @@
-# Copyright (C) 2014 Automattic
+# Copyright (C) 2014 Kelly Dwan & Mel Choyce
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: _s 1.0-wpcom\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
+"Project-Id-Version: Adirondack 0.1.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/adirondack\n"
 "POT-Creation-Date: 2014-06-03 14:02:16+00:00\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: grunt-wp-i18n 0.4.9\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_"
+"attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c;\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Country: United States\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Textdomain-Support: yes\n"
 
 #: 404.php:15
 msgid "Oops! That page can&rsquo;t be found."
@@ -18,16 +30,16 @@ msgstr ""
 
 #: 404.php:19
 msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
+"It looks like nothing was found at this location. Maybe try one of the "
+"links below or a search?"
 msgstr ""
 
 #: 404.php:27
 msgid "Most Used Categories"
 msgstr ""
 
-#. translators: %1$s: smiley
 #: 404.php:44
+#. translators: %1$s: smiley
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
@@ -43,18 +55,8 @@ msgstr ""
 msgid "Month: %s"
 msgstr ""
 
-#: archive.php:33
-msgctxt "monthly archives date format"
-msgid "F Y"
-msgstr ""
-
 #: archive.php:36
 msgid "Year: %s"
-msgstr ""
-
-#: archive.php:36
-msgctxt "yearly archives date format"
-msgid "Y"
 msgstr ""
 
 #: archive.php:39
@@ -93,30 +95,23 @@ msgstr ""
 msgid "Chats"
 msgstr ""
 
-#: archive.php:66 sidebar.php:16
+#: archive.php:66
 msgid "Archives"
 msgstr ""
 
-#: comments.php:28
-msgctxt "comments title"
-msgid "One thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
-
-#: comments.php:35 comments.php:52
+#: comments.php:54
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:36 comments.php:53
+#: comments.php:55
 msgid "&larr; Older Comments"
 msgstr ""
 
-#: comments.php:37 comments.php:54
+#: comments.php:56
 msgid "Newer Comments &rarr;"
 msgstr ""
 
-#: comments.php:64
+#: comments.php:66
 msgid "Comments are closed."
 msgstr ""
 
@@ -125,8 +120,7 @@ msgid "Nothing Found"
 msgstr ""
 
 #: content-none.php:19
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
 #: content-none.php:23
@@ -141,91 +135,85 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: content-page.php:18 content-single.php:20 content.php:27
+#: content-page.php:39 content-single.php:37
 msgid "Pages:"
 msgstr ""
 
-#: content-page.php:24 content-single.php:60 content.php:61
-msgid "Edit"
+#: content-page.php:49 content-single.php:80
+msgid "Comments"
 msgstr ""
 
+#: content-page.php:50 content-single.php:81
+msgid "View comments"
+msgstr ""
+
+#: content-page.php:50 content-single.php:81
+msgid "Hide comments"
+msgstr ""
+
+#: content-page.php:54
+msgid "Edit this page"
+msgstr ""
+
+#: content-page.php:54 content-single.php:85
+msgid "For the author"
+msgstr ""
+
+#: content-single.php:47 content-single.php:50
 #. translators: used between list items, there is a space after the comma
-#: content-single.php:29 content-single.php:32 content.php:38 content.php:48
 msgid ", "
 msgstr ""
 
-#: content-single.php:37
-msgid ""
-"This entry was tagged %2$s. Bookmark the <a href=\"%3$s\" rel=\"bookmark"
-"\">permalink</a>."
+#: content-single.php:59
+msgid "Tags"
 msgstr ""
 
-#: content-single.php:39
-msgid "Bookmark the <a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
+#: content-single.php:66
+msgid "Categories"
 msgstr ""
 
-#: content-single.php:45
-msgid ""
-"This entry was posted in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s\" "
-"rel=\"bookmark\">permalink</a>."
+#: content-single.php:73
+msgid "Format"
 msgstr ""
 
-#: content-single.php:47
-msgid ""
-"This entry was posted in %1$s. Bookmark the <a href=\"%3$s\" rel=\"bookmark"
-"\">permalink</a>."
+#: content-single.php:85
+msgid "Edit this post"
 msgstr ""
 
-#: content.php:24
-msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
-
-#: content.php:42
-msgid "Posted in %1$s"
-msgstr ""
-
-#: content.php:52
-msgid "Tagged %1$s"
-msgstr ""
-
-#: content.php:58
-msgid "Leave a comment"
-msgstr ""
-
-#: content.php:58
-msgid "1 Comment"
-msgstr ""
-
-#: content.php:58
-msgid "% Comments"
-msgstr ""
-
-#: footer.php:15
-msgid "http://wordpress.org/"
-msgstr ""
-
-#: footer.php:15
-msgid "Proudly powered by %s"
-msgstr ""
-
-#: footer.php:17
-msgid "Theme: %1$s by %2$s."
-msgstr ""
-
-#: functions.php:45 header.php:32
+#: functions.php:50
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:80
+#: functions.php:79
 msgid "Sidebar"
 msgstr ""
 
-#: header.php:23
+#: header.php:24
 msgid "Skip to content"
 msgstr ""
 
-#: inc/extras.php:63
+#: inc/extras.php:105
 msgid "Page %s"
+msgstr ""
+
+#: inc/extras.php:222 inc/extras.php:271
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: inc/extras.php:229 inc/extras.php:278
+msgid "%1$s ago"
+msgstr ""
+
+#: inc/extras.php:237 inc/extras.php:286
+msgid "Edit"
+msgstr ""
+
+#: inc/extras.php:262
+msgid "In reply to %2$s, %1$s <span class=\"says\">said,</span>"
+msgstr ""
+
+#: inc/extras.php:264
+msgid "%1$s <span class=\"says\">said,</span>"
 msgstr ""
 
 #: inc/template-tags.php:21
@@ -244,36 +232,36 @@ msgstr ""
 msgid "Post navigation"
 msgstr ""
 
-#: inc/template-tags.php:55
-msgctxt "Previous post link"
-msgid "<span class=\"meta-nav\">&larr;</span> %title"
+#: inc/template-tags.php:80
+msgid "Scheduled"
 msgstr ""
 
-#: inc/template-tags.php:56
-msgctxt "Next post link"
-msgid "%title <span class=\"meta-nav\">&rarr;</span>"
+#: inc/template-tags.php:84
+msgid "Pending Review"
 msgstr ""
 
-#: inc/template-tags.php:82
-msgctxt "post date"
-msgid "Posted on %s"
+#: inc/template-tags.php:88
+msgid "Privately published"
 msgstr ""
 
-#: inc/template-tags.php:87
-msgctxt "post author"
-msgid "by %s"
+#: inc/template-tags.php:93
+msgid "Draft"
+msgstr ""
+
+#: inc/template-tags.php:99
+msgid "Published"
+msgstr ""
+
+#: inc/template-tags.php:117
+msgid "Updated"
 msgstr ""
 
 #: search.php:16
 msgid "Search Results for: %s"
 msgstr ""
 
-#: sidebar.php:23
-msgid "Meta"
-msgstr ""
-
 #. Theme Name of the plugin/theme
-msgid "_s"
+msgid "Adirondack"
 msgstr ""
 
 #. Theme URI of the plugin/theme
@@ -281,17 +269,71 @@ msgid "http://underscores.me/"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid ""
-"Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, if "
-"you like. I'm a theme meant for hacking so don't use me as a <em>Parent "
-"Theme</em>. Instead try turning me into the next, most awesome, WordPress "
-"theme out there. That's what I'm here for."
+msgid "Description"
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "Automattic"
+msgid "Kelly Dwan & Mel Choyce"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "http://automattic.com/"
+msgid "http://themes.redradar.net"
+msgstr ""
+
+#: archive.php:33
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: archive.php:36
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: comments.php:35
+msgctxt "comments title"
+msgid "One comment"
+msgid_plural "%1$s comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:72
+msgctxt "noun"
+msgid "Comment"
+msgstr ""
+
+#: functions.php:124
+#. Translators: If there are characters in your language that are not
+#. * supported by Maven Pro, translate this to 'off'. Do not translate
+#. * into your own language.
+msgctxt "Maven Pro font: on or off"
+msgid "on"
+msgstr ""
+
+#: functions.php:130
+#. Translators: If there are characters in your language that are not
+#. * supported by PT Serif, translate this to 'off'. Do not translate into
+#. * your own language.
+msgctxt "PT Serif font: on or off"
+msgid "on"
+msgstr ""
+
+#: header.php:42
+msgctxt "primary menu label"
+msgid "Menu"
+msgstr ""
+
+#: inc/extras.php:233 inc/extras.php:282
+msgctxt "1: date, 2: time"
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: inc/template-tags.php:55
+msgctxt "Previous post link"
+msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
+msgstr ""
+
+#: inc/template-tags.php:56
+msgctxt "Next post link"
+msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
 msgstr ""

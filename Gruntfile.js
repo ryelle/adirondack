@@ -119,6 +119,37 @@ module.exports = function(grunt) {
 			},
 		},
 
+		makepot: {
+			dev: {
+				options: {
+					cwd: SOURCE_DIR,
+					domainPath: '/languages',
+					mainFile: 'style.css',
+					potFilename: THEME_NAME + '.pot',
+					potHeaders: {
+						poedit: true,
+						'x-poedit-keywordslist': true
+					},
+					type: 'wp-theme',
+					updateTimestamp: false
+				}
+			},
+			dist: {
+				options: {
+					cwd: BUILD_DIR,
+					domainPath: '/languages',
+					mainFile: 'style.css',
+					potFilename: THEME_NAME + '.pot',
+					potHeaders: {
+						poedit: true,
+						'x-poedit-keywordslist': true
+					},
+					type: 'wp-theme',
+					updateTimestamp: false
+				}
+			}
+		},
+
 		compress: {
 			main: {
 				options: {
@@ -149,8 +180,8 @@ module.exports = function(grunt) {
 	// Register tasks.
 
 	// Build task.
-	grunt.registerTask('dev',     ['sass:dev', 'autoprefixer:dev', 'concat:dev', 'svgstore:dev']);
-	grunt.registerTask('build',   ['clean:all', 'copy:all', 'sass:dist', 'autoprefixer:dist', 'concat:dist', 'svgstore:dist', 'clean:dist']);
+	grunt.registerTask('dev',     ['sass:dev', 'autoprefixer:dev', 'concat:dev', 'svgstore:dev', 'makepot:dev']);
+	grunt.registerTask('build',   ['clean:all', 'copy:all', 'sass:dist', 'autoprefixer:dist', 'concat:dist', 'svgstore:dist', 'makepot:dist', 'clean:dist']);
 	grunt.registerTask('publish', ['build', 'compress:main']);
 
 	// Default task.

@@ -1,0 +1,576 @@
+/*
+ * RTL Styles for Adirondack
+ */
+/*--------------------------------------------------------------
+1.0 - Reset
+--------------------------------------------------------------*/
+
+body {
+	direction: rtl;
+	unicode-bidi: embed;
+}
+
+caption, th, td {
+	text-align: right;
+}
+
+/*--------------------------------------------------------------
+2.0 Typography
+--------------------------------------------------------------*/
+
+.site-header .site-branding {
+	float: right;
+}
+
+.site-title {
+	padding-right: 60px;
+	padding-left: 0;
+
+	@media (max-width: 450px) {
+		padding-right: 20px;
+	}
+}
+
+/*--------------------------------------------------------------
+3.0 Elements
+--------------------------------------------------------------*/
+
+ul, ol {
+	margin: 0 3em 1.5em 0;
+}
+
+li > ul,
+li > ol {
+	margin-right: 1.5em;
+	margin-left: auto;
+}
+
+th, td {
+	border-left: 1px solid #2c3642;
+	border-right: none;
+}
+
+th:first-of-type, td:first-of-type {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+th:last-of-type, td:last-of-type {
+	padding-left: 0;
+	border-left: none;
+	padding-right: 0;
+	border-right: none;
+}
+
+/*--------------------------------------------------------------
+5.2 Menus
+--------------------------------------------------------------*/
+.main-navigation {
+	float: left;
+	padding: 0 0 30px 40px;
+}
+
+.main-navigation ul {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.main-navigation ul ul ul li a {
+	padding-right: 20px;
+	padding-left: 0;
+}
+
+.main-navigation li {
+	float: right;
+}
+
+/* Small menu */
+
+@media screen and (max-width: 800px) {
+	.menu-toggle,
+	.small-widgets-toggle {
+		left: 20px;
+		right: auto;
+	}
+
+	.has-widgets .menu-toggle {
+		left: 67px;
+		right: auto;
+	}
+
+	.main-navigation {
+		padding-left: 20px;
+		padding-right: 0;
+	}
+
+	.main-navigation.toggled {
+		padding-right: 45px;
+		padding-left: 0;
+	}
+
+	.main-navigation.toggled li ul {
+		right: 0;
+		left: auto;
+	}
+}
+
+@media (max-width: 450px) {
+	.main-navigation.toggled {
+		padding-left: 0;
+		padding-right: 5px;
+	}
+}
+
+.comment-navigation .nav-previous,
+.paging-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: right;
+}
+
+.comment-navigation .nav-next,
+.paging-navigation .nav-next,
+.post-navigation .nav-next {
+	float: left;
+	text-align: left;
+}
+
+.comment-navigation .nav-previous a,
+.post-navigation .nav-previous a {
+	margin-left: 2px;
+	margin-right: auto;
+}
+
+.comment-navigation .nav-next a,
+.post-navigation .nav-next a {
+	margin-right: 2px;
+	margin-left: auto;
+}
+
+/*--------------------------------------------------------------
+6.0 Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers */
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	right: 5px;
+	left: auto;
+}
+
+/*--------------------------------------------------------------
+9.0 Widgets
+--------------------------------------------------------------*/
+#secondary {
+	right: 0;
+	left: 0;
+}
+
+.widget {
+	float: right;
+}
+
+.widget:nth-of-type(4n+5) {
+	clear: right;
+}
+
+/*--------------------------------------------------------------
+10.1 Posts and pages
+--------------------------------------------------------------*/
+/* Single post in the grid */
+.post-grid {
+	float: right;
+}
+
+.featured-post .entry-link:before {
+	right: 0;
+	left: auto;
+}
+
+/* Elemets shared between has-post-thumbnail and no-image */
+.entry-link {
+	right: 0;
+	left: auto;
+}
+
+.link-button {
+	right: 0;
+	left: auto;
+}
+
+/* Styling that applies only to grid items with images */
+.post-grid.has-post-thumbnail .entry-link:before {
+	right: 0;
+	left: auto;
+}
+
+.post-grid.has-post-thumbnail .entry-title,
+.post-grid.has-post-thumbnail .entry-summary {
+	right: 0;
+	left: auto;
+}
+
+/* Elemets shared between has-post-thumbnail and no-image */
+.link-button {
+	right: 0;
+	left: auto;
+}
+
+body.no-image .entry-header {
+	padding: 100px 120px 100px 20px;
+
+	@media (max-width: 800px) {
+		padding-left: 20px;
+		padding-right: 60px;
+	}
+	@media (max-width: 450px) {
+		padding-right: 20px;
+	}
+}
+
+body.no-image.has-comments .entry-header {
+	padding-left: 80px;
+	padding-right: 120px;
+}
+
+.featured-post .entry-header {
+	right: 2em;
+	left: auto;
+}
+
+.entry-image {
+	padding-right: 120px;
+	padding-left: 0;
+
+	&.panorama {
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+	@media (max-width: 800px) {
+		padding-right: 0;
+		padding-left: 0;
+	}
+}
+
+.singular .hentry {
+	margin: 0 120px 100px 60px;
+}
+
+.singular.has-comments .hentry {
+	margin-left: 80px;
+	margin-right: 120px;
+}
+
+.singular .entry-content {
+	float: right;
+	margin: 0 0 0 -36%;
+}
+
+.singular .entry-content .wrapper {
+	margin: 0 0 0 36%;
+
+	@media (max-width: 600px) {
+		margin: 0;
+	}
+}
+
+.singular .entry-footer {
+	float: left;
+	padding-right: 75px;
+	padding-left: 0;
+}
+
+.singular .post-navigation .nav-links {
+	margin: 0 120px 100px 20px;
+}
+
+@media (max-width: 800px) {
+	.singular .post-navigation .nav-links {
+		margin-right: 60px;
+		margin-left: 20px;
+	}
+}
+
+.singular.no-comments .nav-links {
+	margin-left: 60px;
+
+	@media (max-width: 800px) {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+}
+
+.singular.has-comments .post-navigation {
+	margin-left: 60px;
+	margin-right: auto;
+}
+
+@media (max-width: 600px) {
+	.singular .hentry {
+		margin: 0 120px 100px 60px;
+	}
+
+	.singular .entry-footer {
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+	.singular .entry-footer .meta-item {
+		padding-left: 5px;
+		padding-right: 0;
+	}
+}
+
+.page.has-comments .hentry {
+	margin-left: auto;
+	padding-left: 80px;
+	padding-right: 0;
+	margin-right: auto;
+}
+
+.page.no-image .entry-header {
+	padding-right: 80px;
+	padding-left: 80px;
+}
+
+.page .entry-image {
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+.page .hentry {
+	margin-left: auto !important;
+	margin-right: auto !important;
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+.page .entry-content .wrapper {
+	margin: 0;
+}
+
+.page .entry-footer {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.page .entry-footer .meta-item {
+	padding-left: 5px;
+	padding-right: 0;
+}
+
+.search .search-form {
+	padding-right: 2em;
+	padding-left: 2em;
+}
+
+/*--------------------------------------------------------------
+10.2 Post Formats
+--------------------------------------------------------------*/
+
+.single-format-image .hentry,
+.single-format-video .hentry {
+	margin: 0 120px 100px 60px;
+}
+
+.single-format-image .entry-footer,
+.single-format-video .entry-footer {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+.single-format-image .entry-footer .meta-item,
+.single-format-video .entry-footer .meta-item {
+	padding-left: 5px;
+	padding-right: 0;
+}
+
+/*--------------------------------------------------------------
+10.3 Comments
+--------------------------------------------------------------*/
+
+.comment-list .avatar {
+	float: right;
+}
+
+.comment-list .comment-content {
+	margin-right: 70px;
+	margin-left: auto;
+}
+
+.pingback .avatar {
+	float: right;
+}
+
+.comment-form .comment-wrap:after {
+	left: auto;
+	right: 20px;
+}
+
+.comment-form .form-submit {
+	text-align: left;
+}
+
+.comments-icon {
+	left: 15px;
+	right: auto;
+}
+
+.toggle-comments.icon {
+	left: 15px;
+	right: auto;
+}
+
+/**
+ * Slide-out comment sidebar.
+ *
+ * Animates the width of the comments container, from a blue
+ * stripe 60px wide, to the full sidebar width of 335px.
+ * Animation is controlled by toggeled body classes.
+ */
+#comments-bg {
+	left: 0;
+	right: auto;
+}
+
+#comments-container,
+#comments-bg {
+	left: 0;
+	right: auto;
+}
+
+/*--------------------------------------------------------------
+10.4 Responsive
+--------------------------------------------------------------*/
+@media (max-width: 800px) {
+	.singular .hentry {
+		margin-right: 60px !important;
+		margin-left: 60px !important;
+	}
+}
+
+@media (max-width: 450px) {
+	.singular .hentry {
+		margin-right: 20px !important;
+		margin-left: 20px !important;
+	}
+}
+
+.singular.has-comments .hentry {
+	margin-left: 80px !important;
+}
+
+/*--------------------------------------------------------------
+12.2 Galleries
+--------------------------------------------------------------*/
+
+.gallery .gallery-item {
+	float: right;
+}
+
+/* Fluid Gallery Columns
+   works well if you remove the default gallery styling
+   by adding the following to your functions.php
+   add_filter( 'use_default_gallery_style', '__return_false' );
+*/
+.gallery-columns-1 .gallery-item {
+	margin-left: 2%;
+	margin-right: auto;
+}
+
+.gallery-columns-1 .gallery-item:nth-of-type(1n - 1) {
+	margin-left: 0;
+	clear: left;
+	margin-right: auto;
+}
+
+.gallery-columns-2 .gallery-item {
+	margin-left: 2%;
+	margin-right: auto;
+}
+
+.gallery-columns-2 .gallery-item:nth-of-type(2n - 2) {
+	margin-left: 0;
+	clear: left;
+	margin-right: auto;
+}
+
+.gallery-columns-3 .gallery-item {
+	margin-left: 2%;
+	margin-right: auto;
+}
+
+.gallery-columns-3 .gallery-item:nth-of-type(3n - 3) {
+	margin-left: 0;
+	clear: left;
+	margin-right: auto;
+}
+
+.gallery-columns-4 .gallery-item {
+	margin-left: 2%;
+	margin-right: auto;
+}
+
+.gallery-columns-4 .gallery-item:nth-of-type(4n - 4) {
+	margin-left: 0;
+	clear: left;
+	margin-right: auto;
+}
+
+.gallery-columns-5 .gallery-item {
+	margin-left: 2%;
+	margin-right: auto;
+}
+
+.gallery-columns-5 .gallery-item:nth-of-type(5n - 5) {
+	margin-left: 0;
+	clear: left;
+	margin-right: auto;
+}
+
+.gallery-columns-6 .gallery-item {
+	margin-left: 2%;
+	margin-right: auto;
+}
+
+.gallery-columns-6 .gallery-item:nth-of-type(6n - 6) {
+	margin-left: 0;
+	clear: left;
+	margin-right: auto;
+}
+
+.gallery-columns-7 .gallery-item {
+	margin-left: 2%;
+	margin-right: auto;
+}
+
+.gallery-columns-7 .gallery-item:nth-of-type(7n - 7) {
+	margin-left: 0;
+	clear: left;
+	margin-right: auto;
+}
+
+.gallery-columns-8 .gallery-item {
+	margin-left: 2%;
+	margin-right: auto;
+}
+
+.gallery-columns-8 .gallery-item:nth-of-type(8n - 8) {
+	margin-left: 0;
+	clear: left;
+	margin-right: auto;
+}
+
+.gallery-columns-9 .gallery-item {
+	margin-left: 2%;
+	margin-right: auto;
+}
+
+.gallery-columns-9 .gallery-item:nth-of-type(9n - 9) {
+	margin-left: 0;
+	clear: left;
+	margin-right: auto;
+}
+
+/* Generated by the RTLer - http://wordpress.org/extend/plugins/rtler/ */

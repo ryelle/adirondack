@@ -13,3 +13,12 @@
 .aligncenter {
 	@include center-block;
 }
+
+@media (max-width: 450px) {
+	.alignleft,
+	.alignright {
+		display: block;
+		float: none;
+		margin: 0 auto;
+	}
+}

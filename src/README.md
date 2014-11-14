@@ -18,13 +18,23 @@ Supercharge Adirondack with Jetpack galleries, carousels, infinite scroll, and P
 
 ###Licenses
 
-License: GNU General Public License v2.0
-
+Adirondack is released under GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-####External resources:
+Adirondack bundles the following third-party resources:
 
-DoubleTapToGo by Osvaldas Valutis (MIT), http://osvaldas.info/drop-down-navigation-responsive-and-touch-friendly
+Ellipsis, Attachment, Close svg icons from Genericons, Copyright 2014 Automattic
+Genericons are licensed under the terms of the GNU GPL, Version 2 (or later)
+Source: http://www.genericons.com
+
+DoubleTapToGo by Osvaldas Valutis (MIT)
+Source: http://osvaldas.info/drop-down-navigation-responsive-and-touch-friendly
+
+Modernizr 2.8.3 (Custom Build)
+License: MIT
+Source: http://modernizr.com/
+
+Images in screenshot are CC0, from https://unsplash.com/
 
 ### Changelog
 

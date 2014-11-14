@@ -323,10 +323,10 @@ body.no-image.has-comments .entry-header {
 }
 
 .page.has-comments .hentry {
-	margin-left: auto;
+	margin-left: auto !important;
+	margin-right: auto !important;
 	padding-left: 80px;
-	padding-right: 0;
-	margin-right: auto;
+	padding-right: 2em;
 }
 
 .page.no-image .entry-header {
@@ -459,6 +459,9 @@ body.no-image.has-comments .entry-header {
 
 .singular.has-comments .hentry {
 	margin-left: 80px !important;
+}
+.page.has-comments .hentry {
+	margin-left: auto !important;
 }
 
 /*--------------------------------------------------------------

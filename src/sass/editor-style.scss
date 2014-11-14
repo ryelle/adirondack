@@ -17,5 +17,8 @@ body {
 
 @import "typography/typography";
 @import "elements/elements";
+@import "navigation/links";
 
-
+body, button, input, select, textarea {
+	@include font-size(1.7);
+}

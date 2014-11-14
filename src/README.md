@@ -4,9 +4,9 @@ by [Kelly Dwan](http://redradar.net) and [Mel Choyce](http://choycedesign.com)
 
 Adirondack is a free WordPress theme...
 
-### Feature
+### Featured Content
 
-blurb
+If you have [Jetpack](http://jetpack.me) installed and active, this theme will display your most recent featured post in a large, full-width layout above the rest of your posts.
 
 ###Fully responsive
 

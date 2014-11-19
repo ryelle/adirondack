@@ -2,7 +2,7 @@ Adirondack
 ===
 by [Kelly Dwan](http://redradar.net) and [Mel Choyce](http://choycedesign.com)
 
-Adirondack is a free WordPress theme...
+Adirondack has a bright, clean layout designed to give your content the full attention it deserves. With large images and neat typography, this theme is crafted for longform writers and photographers alike.
 
 ### Featured Content
 

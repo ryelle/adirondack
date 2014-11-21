@@ -24,7 +24,7 @@
 	text-decoration: none;
 }
 
-.hentry {
+.hentry, .page-content {
 	margin-left: auto !important;
 	margin-right: auto !important;
 	margin-bottom: 40px;
@@ -35,5 +35,33 @@
 	@media (max-width: 450px) {
 		padding-left: 1em;
 		padding-right: 1em;
+	}
+}
+
+.page-content {
+	padding-left: 0;
+	padding-right: 0;
+
+	p {
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+}
+
+.widget {
+	padding-top: 0;
+	width: 50%;
+
+	&:first-of-type:last-of-type {
+		width: 100%;
+	}
+
+	a {
+		color: $color__text-widget;
+
+		&:hover,
+		&:focus {
+			color: $color__text-input-focus;
+		}
 	}
 }

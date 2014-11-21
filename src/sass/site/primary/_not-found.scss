@@ -1,0 +1,41 @@
+
+.not-found {
+	background: $color__background-body;
+
+	.page-header {
+		margin-bottom: 60px;
+	}
+
+	.page-content {
+		margin-left: auto !important;
+		margin-right: auto !important;
+		max-width: $size__site-main;
+
+		@media (max-width: 450px) {
+			padding-left: 1em;
+			padding-right: 1em;
+		}
+
+		p {
+			margin-bottom: 0;
+			padding-left: 2em;
+			padding-right: 2em;
+		}
+	}
+
+	.search-form {
+		margin: 40px auto 0;
+		padding-left: 2em;
+		padding-right: 2em;
+		max-width: $size__site-main;
+		box-sizing: content-box;
+
+		input[type="submit"] {
+			clip: rect(1px, 1px, 1px, 1px);
+			position: absolute !important;
+			height: 1px;
+			width: 1px;
+			overflow: hidden;
+		}
+	}
+}

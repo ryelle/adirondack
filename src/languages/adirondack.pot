@@ -38,11 +38,6 @@ msgstr ""
 msgid "Most Used Categories"
 msgstr ""
 
-#: 404.php:44
-#. translators: %1$s: smiley
-msgid "Try looking in the monthly archives. %1$s"
-msgstr ""
-
 #: archive.php:27
 msgid "Author: %s"
 msgstr ""
@@ -265,11 +260,14 @@ msgid "Adirondack"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "http://underscores.me/"
+msgid "http://themes.redradar.net/adirondack/documentation/"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "Description"
+msgid ""
+"Adirondack has a bright, clean layout designed to give your content the "
+"full attention it deserves. With large images and neat typography, this "
+"theme is crafted for longform writers and photographers alike."
 msgstr ""
 
 #. Author of the plugin/theme

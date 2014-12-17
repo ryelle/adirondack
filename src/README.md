@@ -38,5 +38,8 @@ Images in screenshot are CC0, from https://unsplash.com/
 
 ### Changelog
 
+Version 0.1.1
+* Style 404 and No Results pages.
+
 Version 0.1.0
 * First public release

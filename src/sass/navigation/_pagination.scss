@@ -21,6 +21,7 @@
 	width: 50%;
 }
 
+.paging-navigation,
 .comment-navigation,
 .post-navigation {
 	a {
@@ -63,3 +64,38 @@
 		margin-top: 10px;
 	}
 }
+
+.paging-navigation {
+	margin: 0 !important;
+	padding: 1.5em 120px;
+	width: 100%;
+
+	@media (max-width: 800px) {
+		padding-left: 60px;
+		padding-right: 60px;
+	}
+
+	@media (max-width: 450px) {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	@media (max-width: 400px) {
+		.nav-next,
+		.nav-previous {
+			width: 100%;
+
+			a {
+				width: 100%;
+			}
+		}
+
+		.nav-previous + .nav-next {
+			margin-top: 20px;
+		}
+	}
+}
+
+
+
+

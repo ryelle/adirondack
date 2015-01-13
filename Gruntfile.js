@@ -22,7 +22,14 @@ module.exports = function(grunt) {
 					'layouts',
 					'.sass-cache'
 				]
-			}
+			},
+			dev: [
+				SOURCE_DIR + 'style.css',
+				SOURCE_DIR + 'rtl.css',
+				SOURCE_DIR + 'editor-style.css',
+				SOURCE_DIR + 'js/' + THEME_NAME + '.js',
+				SOURCE_DIR + 'images/sprite.svg'
+			]
 		},
 
 		copy: {

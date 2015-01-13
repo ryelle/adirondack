@@ -127,7 +127,8 @@ module.exports = function(grunt) {
 					potFilename: THEME_NAME + '.pot',
 					potHeaders: {
 						poedit: true,
-						'x-poedit-keywordslist': true
+						'x-poedit-keywordslist': true,
+						'report-msgid-bugs-to': 'http://wordpress.org/support/theme/' + THEME_NAME
 					},
 					type: 'wp-theme',
 					updateTimestamp: false
@@ -141,7 +142,8 @@ module.exports = function(grunt) {
 					potFilename: THEME_NAME + '.pot',
 					potHeaders: {
 						poedit: true,
-						'x-poedit-keywordslist': true
+						'x-poedit-keywordslist': true,
+						'report-msgid-bugs-to': 'http://wordpress.org/support/theme/' + THEME_NAME
 					},
 					type: 'wp-theme',
 					updateTimestamp: false

@@ -88,3 +88,11 @@ body.no-image {
 		text-decoration: underline;
 	}
 }
+
+.meta-item.author {
+	display: none;
+
+	.group-blog & {
+		display: block;
+	}
+}

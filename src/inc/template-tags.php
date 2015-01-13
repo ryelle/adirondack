@@ -119,6 +119,15 @@ function adirondack_posted_on() {
 		echo '<span class="posted-on">' . $time_string . '</span>';
 		echo '</div>';
 	}
+
+	echo '<div class="meta-item author">';
+	printf( '<h4 class="meta-title">%s</h4>', _x( 'Author', 'Label for author name on post', 'adirondack' ) );
+
+	printf( '<span class="author vcard"><a class="url fn n" href="%s">%s</a></span>',
+		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+		esc_html( get_the_author() )
+	);
+	echo '</div>';
 }
 endif;
 

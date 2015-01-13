@@ -1,4 +1,4 @@
-# Copyright (C) 2014 Kelly Dwan & Mel Choyce
+# Copyright (C) 2015 Kelly Dwan & Mel Choyce
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
@@ -8,7 +8,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: grunt-wp-i18n 0.4.9\n"
@@ -175,40 +175,40 @@ msgstr ""
 msgid "Edit this post"
 msgstr ""
 
-#: functions.php:50
+#: functions.php:58
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:79
+#: functions.php:87
 msgid "Sidebar"
 msgstr ""
 
-#: header.php:24
+#: header.php:23
 msgid "Skip to content"
 msgstr ""
 
-#: inc/extras.php:105
-msgid "Page %s"
-msgstr ""
-
-#: inc/extras.php:222 inc/extras.php:271
+#: inc/extras.php:190 inc/extras.php:239
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: inc/extras.php:229 inc/extras.php:278
+#: inc/extras.php:197 inc/extras.php:246
 msgid "%1$s ago"
 msgstr ""
 
-#: inc/extras.php:237 inc/extras.php:286
+#: inc/extras.php:205 inc/extras.php:254
 msgid "Edit"
 msgstr ""
 
-#: inc/extras.php:262
+#: inc/extras.php:230
 msgid "In reply to %2$s, %1$s <span class=\"says\">said,</span>"
 msgstr ""
 
-#: inc/extras.php:264
+#: inc/extras.php:232
 msgid "%1$s <span class=\"says\">said,</span>"
+msgstr ""
+
+#: inc/extras.php:292
+msgid "Page %s"
 msgstr ""
 
 #: inc/template-tags.php:21
@@ -300,7 +300,7 @@ msgctxt "noun"
 msgid "Comment"
 msgstr ""
 
-#: functions.php:124
+#: functions.php:132
 #. Translators: If there are characters in your language that are not
 #. * supported by Maven Pro, translate this to 'off'. Do not translate
 #. * into your own language.
@@ -308,7 +308,7 @@ msgctxt "Maven Pro font: on or off"
 msgid "on"
 msgstr ""
 
-#: functions.php:130
+#: functions.php:138
 #. Translators: If there are characters in your language that are not
 #. * supported by PT Serif, translate this to 'off'. Do not translate into
 #. * your own language.
@@ -316,12 +316,12 @@ msgctxt "PT Serif font: on or off"
 msgid "on"
 msgstr ""
 
-#: header.php:42
+#: header.php:41
 msgctxt "primary menu label"
 msgid "Menu"
 msgstr ""
 
-#: inc/extras.php:233 inc/extras.php:282
+#: inc/extras.php:201 inc/extras.php:250
 msgctxt "1: date, 2: time"
 msgid "%1$s at %2$s"
 msgstr ""
@@ -334,4 +334,9 @@ msgstr ""
 #: inc/template-tags.php:56
 msgctxt "Next post link"
 msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: inc/template-tags.php:124
+msgctxt "Label for author name on post"
+msgid "Author"
 msgstr ""

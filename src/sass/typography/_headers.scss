@@ -94,12 +94,18 @@ h6 {
 	}
 }
 
-.widget-title {
+.widget-title,
+.widget_calendar caption {
 	margin-bottom: 20px;
 	@include font-size( 1.8 );
 	font-style: normal;
 	text-transform: uppercase;
 	color: $color__text-widget-title;
+}
+
+.widget_calendar caption {
+	font-family: $font__headers;
+	font-weight: 900;
 }
 
 .comments-title,

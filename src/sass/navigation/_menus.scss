@@ -1,11 +1,12 @@
 .main-navigation {
 	float: right;
-	padding: 0 40px 30px 0;
+	margin-top: -8px;
+	padding: 0 40px 25px 0;
 	min-height: 55px;
 
 	font-family: $font__headers;
 	@include font-size(1.5);
-	line-height: 15px;
+	line-height: 34px;
 	font-weight: 700;
 	letter-spacing: 1px;
 	text-transform: uppercase;
@@ -92,7 +93,7 @@
 }
 
 .widgets-toggle {
-	margin-top: -7px;
+	margin-top: 1px;
 
 	button {
 		padding: 6px;

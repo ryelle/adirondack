@@ -42,6 +42,10 @@ Fonts loaded from Google under SIL Open Font License, 1.1 http://scripts.sil.org
 
 ### Changelog
 
+Version 0.1.3
+* Fix overlapping on long menus
+* Leave calendar widget at the default width, rather than streching it full-width.
+
 Version 0.1.2
 * Style navigation links when infinite scroll is disabled
 * Add `title-tag` support

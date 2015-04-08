@@ -13,8 +13,7 @@
 	} elseif ( $url[2] < 800 ) { // Height
 		printf( '<div class="entry-image panorama">%s</div>', get_the_post_thumbnail( get_the_ID(), 'header-image' ) );
 	} else {
-		$url = apply_filters( 'jetpack_photon_url', $url[0], array( 'width' => 1400, 'zoom' => 2 ), null );
-		printf( '<div class="entry-image full-width" style="background-image:url(\'%s\');"></div>', esc_attr( $url ) );
+		printf( '<div class="entry-image full-width" style="background-image:url(\'%s\');"></div>', esc_attr( $url[0] ) );
 	}
 
 else: ?>

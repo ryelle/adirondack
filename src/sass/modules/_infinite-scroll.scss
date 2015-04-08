@@ -9,7 +9,8 @@
 	display: block;
 }
 
-#infinite-handle {
+/* Need the class too, for specificity-- to ensure we override the jetpack styles. */
+.infinite-scroll #infinite-handle {
 	clear: both;
 	padding: 30px;
 	background: $color__background-header;
@@ -24,5 +25,9 @@
 		font-weight: 900;
 		@include font-size( 2.1 );
 		text-transform: uppercase;
+	}
+
+	button {
+		box-shadow: none;
 	}
 }

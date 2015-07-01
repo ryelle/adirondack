@@ -152,6 +152,17 @@ function adirondack_excerpt_more( $more ) {
 add_filter('excerpt_more', 'adirondack_excerpt_more');
 
 /**
+ * Set a default item for empty menus
+ */
+function adirondack_nav_menu_items( $items, $args ) {
+	if ( empty( $items ) && ( $args->theme_location === 'primary' ) ) {
+		$items = ' ';
+	}
+	return $items;
+}
+add_filter( 'wp_nav_menu_items', 'adirondack_nav_menu_items', 10, 2 );
+
+/**
  * Custom display for comments
  */
 

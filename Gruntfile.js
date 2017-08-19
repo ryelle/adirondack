@@ -170,6 +170,9 @@ module.exports = function(grunt) {
 		},
 
 		watch: {
+			options: {
+				livereload: true,
+			},
 			css: {
 				files: [SOURCE_DIR + 'sass/**'],
 				tasks: ['sass:dev','autoprefixer:dev']
@@ -188,7 +191,7 @@ module.exports = function(grunt) {
 	// Register tasks.
 
 	// Build task.
-	grunt.registerTask('dev',     ['sass:dev', 'autoprefixer:dev', 'concat:dev', 'svgstore:dev', 'makepot:dev']);
+	grunt.registerTask('dev',     ['sass:dev', 'autoprefixer:dev', 'concat:dev', 'svgstore:dev', 'makepot:dev', 'watch']);
 	grunt.registerTask('build',   ['clean:all', 'copy:all', 'sass:dist', 'autoprefixer:dist', 'concat:dist', 'svgstore:dist', 'makepot:dist', 'clean:dist']);
 	grunt.registerTask('zip', ['compress:main']);
 	grunt.registerTask('publish', ['build', 'zip']);

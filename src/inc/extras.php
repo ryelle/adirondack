@@ -45,6 +45,10 @@ function adirondack_body_classes( $classes ) {
 		}
 	}
 
+	if ( is_singular() && false !== strpos( get_queried_object()->post_content, '<!-- wp:' ) ) {
+		$classes[] = 'is-gutenberg';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'adirondack_body_classes' );

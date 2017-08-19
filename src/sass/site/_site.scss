@@ -5,6 +5,7 @@
 @import "primary/index";
 @import "primary/archives";
 @import "primary/single-post";
+@import "primary/gutenberg";
 
 .singular {
 	@import "layout/content-sidebar";
@@ -15,7 +16,8 @@
 	@import "layout/full-width";
 }
 
-.search, .error404 {
+.search,
+.error404 {
 	@import "primary/search";
 }
 
@@ -25,7 +27,8 @@
 10.2 Post Formats
 --------------------------------------------------------------*/
 .single-format-image,
-.single-format-video {
+.single-format-video,
+.single.is-gutenberg {
 	@import "layout/full-width";
 }
 

@@ -1,0 +1,73 @@
+// Alignment
+
+.aligncenter {
+	text-align: center;
+}
+
+// Image support
+.alignwide {
+	width: calc( 100vw - 320px );
+	margin-bottom: 1em;
+
+	@media (max-width: 1190px) {
+		width: calc( 100vw - 140px );
+		margin-left: -60px;
+	}
+
+	@media (max-width: 800px) {
+		width: calc( 100vw - 120px );
+		margin-left: -20px;
+	}
+
+	@media (max-width: 450px) {
+		width: calc( 100vw - 60px );
+		margin-left: -20px;
+	}
+}
+
+.wp-block-cover-image,
+.alignfull {
+	width: calc( 100vw - 60px );
+	margin-left: -120px;
+	margin-bottom: 1em;
+
+	@media (max-width: 800px) {
+		margin-left: -60px;
+	}
+
+	@media (max-width: 450px) {
+		margin-left: -20px;
+	}
+}
+
+// Specificity for the cover image header color
+.wp-block-cover-image.wp-block-cover-image h2 {
+	color: white;
+}
+
+// @todo Button needs a hover state
+.wp-block-button {
+	a:link,
+	a:visited {
+		color: white;
+	}
+
+	a:hover,
+	a:active,
+	a:focus {
+		color: white;
+	}
+
+	a:focus {
+		text-decoration: underline;
+	}
+}
+
+// Remove max-width off the cover text.
+.wp-block-cover-text {
+	margin-bottom: 1.5em;
+
+	p {
+		max-width: 100%;
+	}
+}

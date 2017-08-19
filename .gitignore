@@ -1,0 +1,6 @@
+node_modules
+.sass-cache
+src/*.css
+src/*.css.map
+src/images/sprite.svg
+src/js/adirondack.js

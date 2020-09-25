@@ -1,5 +1,6 @@
 /* jshint node:true */
 module.exports = function(grunt) {
+	const sass = require('node-sass');
 	var path = require('path'),
 		THEME_NAME = 'adirondack',
 		SOURCE_DIR = 'src/',
@@ -56,12 +57,12 @@ module.exports = function(grunt) {
 		},
 
 		sass: {
+			options: {
+				implementation: sass,
+				sourceMap: false,
+				outputStyle: 'expanded'
+			},
 			dev: {
-				options: {
-					style: 'expanded',
-					noCache: false,
-					sourcemap: false
-				},
 				expand: true,
 				cwd: SOURCE_DIR + 'sass/',
 				dest: SOURCE_DIR,
@@ -69,11 +70,6 @@ module.exports = function(grunt) {
 				src: [ 'style.scss', 'editor-style.scss', 'rtl.scss' ]
 			},
 			dist: {
-				options: {
-					style: 'expanded',
-					noCache: true,
-					sourcemap: false
-				},
 				expand: true,
 				cwd: SOURCE_DIR + 'sass/',
 				dest: BUILD_DIR,

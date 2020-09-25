@@ -4,6 +4,9 @@
   "description": "",
   "author": "Kelly Dwan & Mel Choyce",
   "license": "GPLv2 or later",
+  "scripts": {
+    "build": "grunt build"
+  },
   "devDependencies": {
     "grunt": "^1.0.1",
     "grunt-autoprefixer": "^3.0.4",
